@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickToolsHub - Free Online Tools for Everyone</title>
+    <meta name="description" content="Free online tools including Word Counter, Case Converter, Image Compressor, QR Code Generator and more. Fast, simple and secure tools.">
+    <meta name="keywords" content="free tools, online tools, word counter, image compressor, case converter, qr code generator">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-lg">
+                        <i class="fas fa-tools mr-2"></i>
+                        <span class="font-bold text-xl">QuickToolsHub</span>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="#tools" class="text-gray-700 hover:text-blue-600 font-medium transition">Tools</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition">Contact</a>
+                </nav>
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-2">
+                <a href="#home" class="block text-gray-700 hover:text-blue-600 py-2">Home</a>
+                <a href="#tools" class="block text-gray-700 hover:text-blue-600 py-2">Tools</a>
+                <a href="#about" class="block text-gray-700 hover:text-blue-600 py-2">About</a>
+                <a href="#contact" class="block text-gray-700 hover:text-blue-600 py-2">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Free Online Tools</h1>
+            <p class="text-xl mb-8">Fast, Simple & Completely Free Tools for Everyone</p>
+            <div class="max-w-2xl mx-auto">
+                <input type="text" id="searchTools" placeholder="Search for tools..." 
+                    class="w-full px-6 py-4 rounded-lg text-gray-800 text-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+            </div>
+            <div class="mt-6 flex justify-center gap-4">
+                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <span>100% Free</span>
+                </div>
+                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
+                    <i class="fas fa-lock mr-2"></i>
+                    <span>Secure</span>
+                </div>
+                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
+                    <i class="fas fa-bolt mr-2"></i>
+                    <span>Fast</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder 1 -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="bg-white border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <p class="text-gray-500 font-medium">📢 AdSense Header Ad (728x90 or Responsive)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Tabs -->
+    <section class="bg-white shadow-sm py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button onclick="filterTools('all')" class="category-btn active px-6 py-2 rounded-lg font-medium transition">
+                    <i class="fas fa-home mr-2"></i>All Tools
+                </button>
+                <button onclick="filterTools('text')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
+                    <i class="fas fa-file-text mr-2"></i>Text Tools
+                </button>
+                <button onclick="filterTools('image')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
+                    <i class="fas fa-image mr-2"></i>Image Tools
+                </button>
+                <button onclick="filterTools('converter')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
+                    <i class="fas fa-exchange-alt mr-2"></i>Converters
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Popular Tools</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Word Counter Tool -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="text">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-font text-blue-600 mr-2"></i>Word Counter
+                        </h3>
+                        <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Count words, characters, sentences and paragraphs instantly</p>
+                    <button onclick="openTool('wordCounter')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full">
+                        <i class="fas fa-arrow-right mr-2"></i>Use Tool
+                    </button>
+                </div>
+
+                <!-- Case Converter Tool -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="text">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-text-height text-blue-600 mr-2"></i>Case Converter
+                        </h3>
+                        <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Convert text to uppercase, lowercase, title case & more</p>
+                    <button onclick="openTool('caseConverter')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full">
+                        <i class="fas fa-arrow-right mr-2"></i>Use Tool
+                    </button>
+                </div>
+
+                <!-- Image Compressor Tool -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="image">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-compress text-blue-600 mr-2"></i>Image Compressor
+                        </h3>
+                        <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">Reduce image size without losing quality</p>
+                    <button onclick="openTool('imageCompressor')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full">
+                        <i class="fas fa-arrow-right mr-2"></i>Use Tool
+                    </button>
+                </div>
+
+                <!-- QR Code Generator -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="converter">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-qrcode text-blue-600 mr-2"></i>QR Code Generator
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Create QR codes for URLs, text and more</p>
+                    <button onclick="openTool('qrGenerator')" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition w-full">
+                        <i class="fas fa-arrow-right mr-2"></i>Use Tool
+                    </button>
+                </div>
+
+                <!-- Text to Speech -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="text">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-volume-up text-blue-600 mr-2"></i>Text to Speech
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Convert your text into natural speech</p>
+                    <button onclick="alert('Coming Soon!')" class="bg-gray-400 text-white px-4 py-2 rounded-lg w-full cursor-not-allowed">
+                        <i class="fas fa-clock mr-2"></i>Coming Soon
+                    </button>
+                </div>
+
+                <!-- Lorem Ipsum Generator -->
+                <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="text">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-paragraph text-blue-600 mr-2"></i>Lorem Ipsum
+                        </h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Generate dummy text for your projects</p>
+                    <button onclick="alert('Coming Soon!')" class="bg-gray-400 text-white px-4 py-2 rounded-lg w-full cursor-not-allowed">
+                        <i class="fas fa-clock mr-2"></i>Coming Soon
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AdSense Placeholder 2 -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="bg-white border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                <p class="text-gray-500 font-medium">📢 AdSense Middle Ad (Responsive)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tool Modal -->
+    <div id="toolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-6">
+                    <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
+                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="modalContent"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose QuickToolsHub?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600">All tools run instantly in your browser. No waiting, no delays.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lock text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">100% Secure</h3>
+                    <p class="text-gray-600">Your data never leaves your device. Complete privacy guaranteed.</p>
+                </div>
+                <div class="text-center p-6">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gift text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Completely Free</h3>
+                    <p class="text-gray-600">No sign-up required. No hidden fees. Free forever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">
+                        <i class="fas fa-tools mr-2"></i>QuickToolsHub
+                    </h3>
+                    <p class="text-gray-400 text-sm">Free online tools for everyone. Fast, simple, and secure.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Word Counter</a></li>
+                        <li><a href="#" class="hover:text-white transition">Case Converter</a></li>
+                        <li><a href="#" class="hover:text-white transition">Image Compressor</a></li>
+                        <li><a href="#" class="hover:text-white transition">QR Code Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#about" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect With Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>© 2025 QuickToolsHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Category Filter
+        function filterTools(category) {
+            const cards = document.querySelectorAll('.tool-card');
+            const buttons = document.querySelectorAll('.category-btn');
+            
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-700');
+            });
+            
+            event.target.classList.add('active', 'bg-blue-600', 'text-white');
+            event.target.classList.remove('bg-gray-100', 'text-gray-700');
+            
+            cards.forEach(card => {
+                if (category === 'all' || card.dataset.category === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Search Functionality
+        document.getElementById('searchTools').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.tool-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const desc = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Open Tool Modal
+        function openTool(toolName) {
+            const modal = document.getElementById('toolModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalContent = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+            
+            if (toolName === 'wordCounter') {
+                modalTitle.innerHTML = '<i class="fas fa-font text-blue-600 mr-2"></i>Word Counter';
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <textarea id="wordCountText" class="w-full h-64 p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Type or paste your text here..."></textarea>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <div class="bg-blue-50 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-blue-600" id="wordCount">0</div>
+                                <div class="text-sm text-gray-600">Words</div>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-green-600" id="charCount">0</div>
+                                <div class="text-sm text-gray-600">Characters</div>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-purple-600" id="sentenceCount">0</div>
+                                <div class="text-sm text-gray-600">Sentences</div>
+                            </div>
+                            <div class="bg-yellow-50 p-4 rounded-lg text-center">
+                                <div class="text-3xl font-bold text-yellow-600" id="paraCount">0</div>
+                                <div class="text-sm text-gray-600">Paragraphs</div>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-2">
+                            <button onclick="document.getElementById('wordCountText').value = ''; updateWordCount();" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition">
+                                <i class="fas fa-trash mr-2"></i>Clear
+                            </button>
+                            <button onclick="copyText()" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
+                                <i class="fas fa-copy mr-2"></i>Copy Text
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                document.getElementById('wordCountText').addEventListener('input', updateWordCount);
+                
+            } else if (toolName === 'caseConverter') {
+                modalTitle.innerHTML = '<i class="fas fa-text-height text-blue-600 mr-2"></i>Case Converter';
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <textarea id="caseText" class="w-full h-48 p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Type or paste your text here..."></textarea>
+                        
+                        <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                            <button onclick="convertCase('upper')" class="bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition">
+                                <i class="fas fa-arrow-up mr-2"></i>UPPERCASE
+                            </button>
+                            <button onclick="convertCase('lower')" class="bg-green-500 text-white px-4 py-3 rounded-lg hover:bg-green-600 transition">
+                                <i class="fas fa-arrow-down mr-2"></i>lowercase
+                            </button>
+                            <button onclick="convertCase('title')" class="bg-purple-500 text-white px-4 py-3 rounded-lg hover:bg-purple-600 transition">
+                                <i class="fas fa-font mr-2"></i>Title Case
+                            </button>
+                            <button onclick="convertCase('sentence')" class="bg-yellow-500 text-white px-4 py-3 rounded-lg hover:bg-yellow-600 transition">
+                                <i class="fas fa-align-left mr-2"></i>Sentence case
+                            </button>
+                            <button onclick="convertCase('alternate')" class="bg-pink-500 text-white px-4 py-3 rounded-lg hover:bg-pink-600 transition">
+                                <i class="fas fa-random mr-2"></i>aLtErNaTe
+                            </button>
+                            <button onclick="document.getElementById('caseText').value = '';" class="bg-red-500 text-white px-4 py-3 rounded-lg hover:bg-red-600 transition">
+                                <i class="fas fa-trash mr-2"></i>Clear
+                            </button>
+                        </div>
+                        
+                        <button onclick="copyText('caseText')" class="w-full bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+                            <i class="fas fa-copy mr-2"></i>Copy Result
+                        </button>
+                    </div>
+                `;
+                
+            } else if (toolName === 'imageCompressor') {
+                modalTitle.innerHTML = '<i class="fas fa-compress text-blue-600 mr-2"></i>Image Compressor';
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
+                            <i class="fas fa-cloud-upload-alt text-6xl text-gray-400 mb-4"></i>
+                            <p class="text-gray-600 mb-4">Drag & Drop your image here or click to browse</p>
+                            <input type="file" id="imageInput" accept="image/*" class="hidden" onchange="compressImage(event)">
+                            <button onclick="document.getElementById('imageInput').click()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                                <i class="fas fa-folder-open mr-2"></i>Choose Image
+                            </button>
+                        </div>
+                        
+                        <div id="imagePreview" class="hidden space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="text-center">
+                                    <h4 class="font-bold mb-2">Original</h4>
+                                    <img id="originalImage" class="w-full rounded-lg border">
+                                    <p id="originalSize" class="text-sm text-gray-600 mt-2"></p>
+                                </div>
+                                <div class="text-center">
+                                    <h4 class="font-bold mb-2">Compressed</h4>
+                                    <img id="compressedImage" class="w-full rounded-lg border">
+                                    <p id="compressedSize" class="text-sm text-gray-600 mt-2"></p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2">Compression Quality: <span id="qualityValue">80</span>%</label>
+                                <input type="range" id="qualitySlider" min="10" max="100" value="80" class="w-full" oninput="document.getElementById('qualityValue').textContent = this.value; compressWithQuality()">
+                            </div>
+                            
+                            <button id="downloadBtn" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                                <i class="fas fa-download mr-2"></i>Download Compressed Image
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+            } else if (toolName === 'qrGenerator') {
+                modalTitle.innerHTML = '<i class="fas fa-qrcode text-blue-600 mr-2"></i>QR Code Generator';
+                modalContent.innerHTML = `
+                    <div class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium mb-2">Enter URL or Text:</label>
+                            <input type="text" id="qrInput" placeholder="https://example.com" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                        </div>
+                        
+                        <button onclick="generateQR()" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                            <i class="fas fa-qrcode mr-2"></i>Generate QR Code
+                        </button>
+                        
+                        <div id="qrResult" class="hidden text-center">
+                            <canvas id="qrCanvas" class="mx-auto border-4 border-gray-200 rounded-lg"></canvas>
+                            <button onclick="downloadQR()" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                                <i class="fas fa-download mr-2"></i>Download QR Code
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function closeModal() {
+            document.getElementById('toolModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Word Counter Functions
+        function updateWordCount() {
+            const text = document.getElementById('wordCountText').value;
+            
+            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
+            const chars = text.length;
+            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
+            
+            document.getElementById('wordCount').textContent = words.length;
+            document.getElementById('charCount').textContent = chars;
+            document.getElementById('sentenceCount').textContent = sentences.length;
+            document.getElementById('paraCount').textContent = paragraphs.length;
+        }
+
+        function copyText(id = 'wordCountText') {
+            const text = document.getElementById(id);
+            text.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+        }
+
+        // Case Converter Functions
+        function convertCase(type) {
+            const textArea = document.getElementById('caseText');
+            let text = textArea.value;
+            
+            switch(type) {
+                case 'upper':
+                    textArea.value = text.toUpperCase();
+                    break;
+                case 'lower':
+                    textArea.value = text.toLowerCase();
+                    break;
+                case 'title':
+                    textArea.value = text.toLowerCase().split(' ').map(word => 
+                        word.charAt(0).toUpperCase() + word.slice(1)
+                    ).join(' ');
+                    break;
+                case 'sentence':
+                    textArea.value = text.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, 
+                        c => c.toUpperCase()
+                    );
+                    break;
+                case 'alternate':
+                    textArea.value = text.split('').map((char, i) => 
+                        i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
+                    ).join('');
+                    break;
+            }
+        }
+
+        // Image Compressor Functions
+        let originalFile;
+        
+        function compressImage(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            originalFile = file;
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                document.getElementById('originalImage').src = e.target.result;
+                document.getElementById('originalSize').textContent = 'Size: ' + (file.size / 1024).toFixed(2) + ' KB';
+                document.getElementById('imagePreview').classList.remove('hidden');
+                compressWithQuality();
+            };
+            
+            reader.readAsDataURL(file);
+        }
+
+        function compressWithQuality() {
+            if (!originalFile) return;
+            
+            const quality = document.getElementById('qualitySlider').value / 100;
+            const reader = new FileReader();
+            
+            reader.onload = function(e) {
+                const img = new Image();
+                img.onload = function() {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(img, 0, 0);
+                    
+                    canvas.toBlob(function(blob) {
+                        const url = URL.createObjectURL(blob);
+                        document.getElementById('compressedImage').src = url;
+                        document.getElementById('compressedSize').textContent = 'Size: ' + (blob.size / 1024).toFixed(2) + ' KB';
+                        
+                        document.getElementById('downloadBtn').onclick = function() {
+                            const a = document.createElement('a');
+                            a.href = url;
+                            a.download = 'compressed_' + originalFile.name;
+                            a.click();
+                        };
+                    }, 'image/jpeg', quality);
+                };
+                img.src = e.target.result;
+            };
+            
+            reader.readAsDataURL(originalFile);
+        }
+
+        // QR Code Generator (Simple version using API)
+        function generateQR() {
+            const text = document.getElementById('qrInput').value;
+            if (!text) {
+                alert('Please enter URL or text!');
+                return;
+            }
+            
+            const qrCanvas = document.getElementById('qrCanvas');
+            const ctx = qrCanvas.getContext('2d');
+            const size = 300;
+            qrCanvas.width = size;
+            qrCanvas.height = size;
+            
+            const img = new Image();
+            img.crossOrigin = 'anonymous';
+            img.onload = function() {
+                ctx.drawImage(img, 0, 0, size, size);
+                document.getElementById('qrResult').classList.remove('hidden');
+            };
+            
+            img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=' + size + 'x' + size + '&data=' + encodeURIComponent(text);
+        }
+
+        function downloadQR() {
+            const canvas = document.getElementById('qrCanvas');
+            const url = canvas.toDataURL('image/png');
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'qrcode.png';
+            a.click();
+        }
+
+        // Close modal on outside click
+        document.getElementById('toolModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+
+    <style>
+        .category-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+        
+        .category-btn:not(.active) {
+            background-color: #f3f4f6;
+            color: #374151;
+        }
+        
+        .category-btn:not(.active):hover {
+            background-color: #e5e7eb;
+        }
+    </style>
+</body>
+</html>
