@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - FreeQuickTools</title>
+    <meta name="description" content="Get in touch with FreeQuickTools team. We're here to help!">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white px-4 py-2 rounded-lg">
+                        <i class="fas fa-tools mr-2"></i>
+                        <span class="font-bold text-xl">FreeQuickTools</span>
+                    </div>
+                </a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Home</a>
+                    <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition">About</a>
+                    <a href="contact.html" class="text-blue-600 font-medium">Contact</a>
+                    <a href="privacy-policy.html" class="text-gray-700 hover:text-blue-600 font-medium transition">Privacy</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl font-bold mb-4">Get In Touch</h1>
+            <p class="text-xl">We'd love to hear from you!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                
+                <!-- Contact Form -->
+                <div class="bg-white rounded-lg shadow-md p-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h2>
+                    
+                    <form id="contactForm" class="space-y-4">
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Name</label>
+                            <input type="text" id="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Your name">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="your.email@example.com">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Subject</label>
+                            <select id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                                <option value="general">General Inquiry</option>
+                                <option value="support">Technical Support</option>
+                                <option value="feature">Feature Request</option>
+                                <option value="bug">Bug Report</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-gray-700 font-medium mb-2">Message</label>
+                            <textarea id="message" required rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-medium">
+                            <i class="fas fa-paper-plane mr-2"></i>Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="formMessage" class="hidden mt-4 p-4 rounded-lg"></div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    
+                    <!-- Quick Contact -->
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Quick Contact</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Email</h4>
+                                    <p class="text-gray-600">contact@freequicktools.com</p>
+                                    <p class="text-sm text-gray-500 mt-1">Response within 24-48 hours</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-green-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-globe text-green-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Website</h4>
+                                    <a href="https://mikramtipu.github.io/freequicktools/" class="text-blue-600 hover:underline">mikramtipu.github.io/freequicktools</a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-purple-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Support Hours</h4>
+                                    <p class="text-gray-600">Monday - Friday: 9 AM - 6 PM PKT</p>
+                                    <p class="text-gray-600">Saturday - Sunday: 10 AM - 4 PM PKT</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media -->
+                    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold mb-4">Follow Us</h3>
+                        <p class="mb-6">Stay connected for updates, tips, and new tools!</p>
+                        <div class="flex gap-4">
+                            <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-facebook text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-twitter text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-instagram text-xl"></i>
+                            </a>
+                            <a href="#" class="bg-white text-blue-600 w-12 h-12 rounded-full flex items-center justify-center hover:bg-gray-100 transition">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Preview -->
+                    <div class="bg-white rounded-lg shadow-md p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Quick Questions?</h3>
+                        <p class="text-gray-600 mb-4">Before reaching out, check if your question is answered here:</p>
+                        
+                        <div class="space-y-3">
+                            <div class="border-l-4 border-blue-500 pl-4">
+                                <h4 class="font-bold text-gray-800">Are all tools really free?</h4>
+                                <p class="text-sm text-gray-600">Yes! 100% free, no hidden charges.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-green-500 pl-4">
+                                <h4 class="font-bold text-gray-800">Do I need to create an account?</h4>
+                                <p class="text-sm text-gray-600">No, all tools work without sign-up.</p>
+                            </div>
+                            
+                            <div class="border-l-4 border-purple-500 pl-4">
+                                <h4 class="font-bold text-gray-800">Is my data safe?</h4>
+                                <p class="text-sm text-gray-600">Yes! All processing happens in your browser.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Additional Info Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-headset text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Technical Support</h3>
+                    <p class="text-gray-600 text-sm">Having issues with a tool? We're here to help you troubleshoot.</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-lightbulb text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Feature Requests</h3>
+                    <p class="text-gray-600 text-sm">Have an idea for a new tool? We'd love to hear your suggestions!</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Partnerships</h3>
+                    <p class="text-gray-600 text-sm">Interested in collaborating? Let's explore opportunities together.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-4">
+                        <i class="fas fa-tools mr-2"></i>FreeQuickTools
+                    </h3>
+                    <p class="text-gray-400 text-sm">Free online tools for everyone. Fast, simple, and secure.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Popular Tools</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="index.html#tools" class="hover:text-white transition">Word Counter</a></li>
+                        <li><a href="index.html#tools" class="hover:text-white transition">Case Converter</a></li>
+                        <li><a href="index.html#tools" class="hover:text-white transition">Image Compressor</a></li>
+                        <li><a href="index.html#tools" class="hover:text-white transition">QR Code Generator</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>© 2025 FreeQuickTools. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            const formMessage = document.getElementById('formMessage');
+            formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'bg-green-100', 'text-green-700');
+            
+            // Simple validation
+            if (name && email && message) {
+                formMessage.classList.add('bg-green-100', 'text-green-700');
+                formMessage.innerHTML = '<i class="fas fa-check-circle mr-2"></i><strong>Thank you!</strong> Your message has been received. We\'ll get back to you within 24-48 hours.';
+                
+                // Reset form
+                document.getElementById('contactForm').reset();
+            } else {
+                formMessage.classList.add('bg-red-100', 'text-red-700');
+                formMessage.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i><strong>Error:</strong> Please fill in all required fields.';
+            }
+        });
+    </script>
+</body>
+</html>
