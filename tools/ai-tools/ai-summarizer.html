@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Free AI Summarizer - Summarize Text, Articles & Documents Online 2025</title>
+    <meta name="title" content="Free AI Summarizer - Summarize Text, Articles & Documents Online 2025">
+    <meta name="description" content="Free AI-powered text summarizer. Instantly summarize long articles, documents, essays & research papers. Get key points in seconds. No signup required!">
+    <meta name="keywords" content="AI summarizer, text summarizer, article summarizer, summary generator, free summarizer, online summarizer, document summarizer, AI summary tool">
+    <meta name="author" content="QuickToolsHub">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Free AI Summarizer - Summarize Text Online">
+    <meta property="og:description" content="Instantly summarize long articles, documents & essays with AI. Get key points in seconds. 100% Free!">
+    <meta property="og:image" content="https://your-domain.com/images/ai-summarizer.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Free AI Summarizer - Summarize Text Online">
+    <meta property="twitter:description" content="Instantly summarize long articles, documents & essays with AI. Get key points in seconds. 100% Free!">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://your-domain.com/tools/ai-tools/ai-summarizer.html">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "AI Summarizer",
+      "description": "Free AI-powered text summarizer tool to summarize articles, documents, and essays instantly",
+      "url": "https://your-domain.com/tools/ai-tools/ai-summarizer.html",
+      "applicationCategory": "UtilityApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": "Text Summarization, AI-Powered, Key Points Extraction, Multiple Summary Lengths, Instant Results"
+    }
+    </script>
+    
+    <style>
+        .summary-length-btn.active {
+            background: linear-gradient(to right, #8b5cf6, #ec4899);
+            color: white;
+        }
+        
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #8b5cf6;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-gray-800">QuickToolsHub</h1>
+                        <p class="text-xs text-gray-500">100+ Free Tools</p>
+                    </div>
+                </a>
+                <a href="../../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="inline-block bg-white/20 px-4 py-2 rounded-full backdrop-blur mb-4">
+                <i class="fas fa-robot mr-2"></i>AI-Powered Tool
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                <i class="fas fa-compress-alt mr-3"></i>AI Text Summarizer
+            </h1>
+            <p class="text-xl md:text-2xl mb-6">Summarize Long Articles, Documents & Essays in Seconds</p>
+            <div class="flex flex-wrap justify-center gap-4 text-sm">
+                <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur">
+                    <i class="fas fa-check mr-2"></i>100% Free
+                </div>
+                <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur">
+                    <i class="fas fa-bolt mr-2"></i>Instant Results
+                </div>
+                <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur">
+                    <i class="fas fa-shield-alt mr-2"></i>No Signup Required
+                </div>
+                <div class="bg-white/20 px-4 py-2 rounded-lg backdrop-blur">
+                    <i class="fas fa-infinity mr-2"></i>Unlimited Use
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Tool Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-6xl">
+            
+            <!-- Summary Length Options -->
+            <div class="bg-white rounded-2xl shadow-lg p-6 mb-8">
+                <h2 class="text-2xl font-bold mb-4 text-gray-800">
+                    <i class="fas fa-sliders-h mr-2 text-purple-600"></i>Summary Length
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <button onclick="setSummaryLength('short')" class="summary-length-btn active border-2 border-purple-300 rounded-lg p-4 hover:shadow-md transition">
+                        <i class="fas fa-list-ul text-2xl mb-2"></i>
+                        <p class="font-bold">Short</p>
+                        <p class="text-xs text-gray-600">Key points only</p>
+                    </button>
+                    <button onclick="setSummaryLength('medium')" class="summary-length-btn border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                        <i class="fas fa-align-left text-2xl mb-2"></i>
+                        <p class="font-bold">Medium</p>
+                        <p class="text-xs text-gray-600">Balanced summary</p>
+                    </button>
+                    <button onclick="setSummaryLength('long')" class="summary-length-btn border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                        <i class="fas fa-file-alt text-2xl mb-2"></i>
+                        <p class="font-bold">Long</p>
+                        <p class="text-xs text-gray-600">Detailed summary</p>
+                    </button>
+                    <button onclick="setSummaryLength('bullets')" class="summary-length-btn border-2 border-gray-200 rounded-lg p-4 hover:shadow-md transition">
+                        <i class="fas fa-list text-2xl mb-2"></i>
+                        <p class="font-bold">Bullet Points</p>
+                        <p class="text-xs text-gray-600">Quick highlights</p>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Input/Output Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Input -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-file-import mr-2 text-blue-600"></i>Original Text
+                        </h2>
+                        <span id="charCount" class="text-sm text-gray-500">0 characters</span>
+                    </div>
+                    <textarea 
+                        id="inputText" 
+                        class="w-full h-96 p-4 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none resize-none" 
+                        placeholder="Paste your article, document, or essay here...
+
+Example: You can paste research papers, blog posts, news articles, or any long text you want to summarize."
+                        oninput="updateCharCount()"
+                    ></textarea>
+                    
+                    <div class="flex gap-3 mt-4">
+                        <button onclick="summarizeText()" class="flex-1 bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 px-6 rounded-lg font-bold hover:shadow-xl transition">
+                            <i class="fas fa-magic mr-2"></i>Summarize with AI
+                        </button>
+                        <button onclick="clearInput()" class="bg-gray-200 text-gray-700 py-3 px-6 rounded-lg font-bold hover:bg-gray-300 transition">
+                            <i class="fas fa-trash mr-2"></i>Clear
+                        </button>
+                    </div>
+                    
+                    <!-- Sample Text Button -->
+                    <button onclick="loadSampleText()" class="w-full mt-3 bg-blue-50 text-blue-600 py-2 px-4 rounded-lg hover:bg-blue-100 transition text-sm">
+                        <i class="fas fa-file-alt mr-2"></i>Load Sample Text
+                    </button>
+                </div>
+
+                <!-- Output -->
+                <div class="bg-white rounded-2xl shadow-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-xl font-bold text-gray-800">
+                            <i class="fas fa-file-export mr-2 text-green-600"></i>Summary
+                        </h2>
+                        <span id="summaryLength" class="text-sm text-gray-500"></span>
+                    </div>
+                    
+                    <!-- Processing State -->
+                    <div id="processingState" class="hidden h-96 flex flex-col items-center justify-center">
+                        <div class="spinner mb-4"></div>
+                        <p class="text-gray-600 font-semibold">AI is analyzing your text...</p>
+                        <p class="text-sm text-gray-500 mt-2">This may take a few seconds</p>
+                    </div>
+                    
+                    <!-- Empty State -->
+                    <div id="emptyState" class="h-96 flex flex-col items-center justify-center text-gray-400">
+                        <i class="fas fa-file-alt text-6xl mb-4"></i>
+                        <p class="text-lg font-semibold">Your summary will appear here</p>
+                        <p class="text-sm mt-2">Paste text and click "Summarize with AI"</p>
+                    </div>
+                    
+                    <!-- Summary Output -->
+                    <div id="summaryOutput" class="hidden">
+                        <div class="bg-gradient-to-br from-green-50 to-blue-50 p-4 rounded-lg border-2 border-green-200 h-96 overflow-y-auto">
+                            <div id="summaryText" class="text-gray-800 leading-relaxed whitespace-pre-wrap"></div>
+                        </div>
+                        
+                        <div class="flex gap-3 mt-4">
+                            <button onclick="copySummary()" class="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-green-700 transition">
+                                <i class="fas fa-copy mr-2"></i>Copy Summary
+                            </button>
+                            <button onclick="downloadSummary()" class="flex-1 bg-blue-600 text-white py-3 px-6 rounded-lg font-bold hover:bg-blue-700 transition">
+                                <i class="fas fa-download mr-2"></i>Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Display -->
+            <div id="statsDisplay" class="hidden grid grid-cols-2 md:grid-cols-4 gap-4 mt-8">
+                <div class="bg-white rounded-lg shadow p-4 text-center">
+                    <div class="text-3xl font-bold text-blue-600" id="originalWords">0</div>
+                    <div class="text-sm text-gray-600">Original Words</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 text-center">
+                    <div class="text-3xl font-bold text-green-600" id="summaryWords">0</div>
+                    <div class="text-sm text-gray-600">Summary Words</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 text-center">
+                    <div class="text-3xl font-bold text-purple-600" id="compressionRate">0%</div>
+                    <div class="text-sm text-gray-600">Compression</div>
+                </div>
+                <div class="bg-white rounded-lg shadow p-4 text-center">
+                    <div class="text-3xl font-bold text-orange-600" id="readingTime">0</div>
+                    <div class="text-sm text-gray-600">Minutes Saved</div>
+                </div>
+            </div>
+
+            <!-- Features Section -->
+            <div class="mt-12 bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                    <i class="fas fa-star mr-2 text-yellow-500"></i>Why Use Our AI Summarizer?
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-6">
+                        <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-brain text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI-Powered Intelligence</h3>
+                        <p class="text-gray-600">Advanced AI understands context and extracts key information accurately</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-clock text-green-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Save Time</h3>
+                        <p class="text-gray-600">Summarize hours of reading into minutes. Perfect for students and professionals</p>
+                    </div>
+                    <div class="text-center p-6">
+                        <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-adjust text-purple-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Customizable Length</h3>
+                        <p class="text-gray-600">Choose from short, medium, long, or bullet point summaries</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Use Section -->
+            <div class="mt-12 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                    <i class="fas fa-question-circle mr-2 text-blue-600"></i>How to Use AI Summarizer
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
+                        <h3 class="font-bold mb-2">Paste Your Text</h3>
+                        <p class="text-sm text-gray-600">Copy and paste any article, document, or essay</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
+                        <h3 class="font-bold mb-2">Choose Length</h3>
+                        <p class="text-sm text-gray-600">Select your preferred summary length</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-pink-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
+                        <h3 class="font-bold mb-2">Click Summarize</h3>
+                        <p class="text-sm text-gray-600">Let AI analyze and summarize your text</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
+                        <h3 class="font-bold mb-2">Copy or Download</h3>
+                        <p class="text-sm text-gray-600">Get your summary instantly</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mt-12 bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">
+                    <i class="fas fa-comments mr-2 text-green-600"></i>Frequently Asked Questions
+                </h2>
+                <div class="space-y-4 max-w-3xl mx-auto">
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">What is an AI text summarizer?</h3>
+                        <p class="text-gray-600">An AI text summarizer uses artificial intelligence to analyze long documents and extract the most important information, creating a concise summary while maintaining the original meaning.</p>
+                    </div>
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Is this summarizer really free?</h3>
+                        <p class="text-gray-600">Yes! Our AI summarizer is 100% free with unlimited use. No signup, no hidden fees, no credit card required.</p>
+                    </div>
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">What types of text can I summarize?</h3>
+                        <p class="text-gray-600">You can summarize articles, research papers, essays, blog posts, news stories, reports, documents, and any other text content.</p>
+                    </div>
+                    <div class="border-b pb-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">How accurate are the summaries?</h3>
+                        <p class="text-gray-600">Our AI uses advanced natural language processing to understand context and extract key points accurately. However, we recommend reviewing the summary for critical use cases.</p>
+                    </div>
+                    <div class="pb-4">
+                        <h3 class="font-bold text-lg mb-2 text-gray-800">Can I use this for academic purposes?</h3>
+                        <p class="text-gray-600">Yes! Students use our tool to quickly understand research papers, textbooks, and study materials. It's perfect for literature reviews and research.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">
+                <i class="fas fa-tools mr-2"></i>QuickToolsHub - Free Online Tools
+            </p>
+            <p class="text-sm text-gray-400">© 2025 QuickToolsHub. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="../../index.html" class="text-gray-400 hover:text-white mx-2">Home</a>
+                <a href="../../privacy-policy.html" class="text-gray-400 hover:text-white mx-2">Privacy</a>
+                <a href="../../terms.html" class="text-gray-400 hover:text-white mx-2">Terms</a>
+                <a href="../../contact.html" class="text-gray-400 hover:text-white mx-2">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let selectedLength = 'short';
+        
+        function setSummaryLength(length) {
+            selectedLength = length;
+            document.querySelectorAll('.summary-length-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.closest('button').classList.add('active');
+        }
+        
+        function updateCharCount() {
+            const text = document.getElementById('inputText').value;
+            document.getElementById('charCount').textContent = text.length + ' characters';
+        }
+        
+        function clearInput() {
+            document.getElementById('inputText').value = '';
+            updateCharCount();
+        }
+        
+        function loadSampleText() {
+            const sampleText = `Artificial intelligence (AI) has revolutionized the way we interact with technology. From virtual assistants to self-driving cars, AI is transforming industries and changing our daily lives. Machine learning, a subset of AI, enables computers to learn from data and improve their performance over time without being explicitly programmed.
+
+The impact of AI extends across various sectors including healthcare, finance, education, and entertainment. In healthcare, AI algorithms can analyze medical images to detect diseases early, predict patient outcomes, and assist in drug discovery. Financial institutions use AI for fraud detection, risk assessment, and algorithmic trading.
+
+However, the rapid advancement of AI also raises important ethical considerations. Issues such as data privacy, algorithmic bias, job displacement, and the need for transparency in AI decision-making processes are subjects of ongoing debate. As AI continues to evolve, it's crucial to develop frameworks that ensure its responsible and beneficial use for society.
+
+The future of AI holds immense promise. Researchers are working on developing artificial general intelligence (AGI) that could match or exceed human cognitive abilities. While this goal may be years or decades away, the progress in narrow AI applications continues to accelerate, bringing both opportunities and challenges that society must address thoughtfully.`;
+            
+            document.getElementById('inputText').value = sampleText;
+            updateCharCount();
+        }
+        
+        async function summarizeText() {
+            const inputText = document.getElementById('inputText').value.trim();
+            
+            if (!inputText) {
+                alert('❌ Please enter some text to summarize!');
+                return;
+            }
+            
+            if (inputText.split(/\s+/).length < 50) {
+                alert('⚠️ Please enter at least 50 words for better summarization.');
+                return;
+            }
+            
+            // Show processing state
+            document.getElementById('emptyState').classList.add('hidden');
+            document.getElementById('summaryOutput').classList.add('hidden');
+            document.getElementById('processingState').classList.remove('hidden');
+            
+            // Simulate AI processing (in real app, call AI API here)
+            await new Promise(resolve => setTimeout(resolve, 2000));
+            
+            // Generate summary based on selected length
+            const summary = generateSummary(inputText, selectedLength);
+            
+            // Display summary
+            document.getElementById('summaryText').textContent = summary;
+            document.getElementById('processingState').classList.add('hidden');
+            document.getElementById('summaryOutput').classList.remove('hidden');
+            
+            // Update stats
+            updateStats(inputText, summary);
+        }
+        
+        function generateSummary(text, length) {
+            // This is a simple extractive summarization
+            // In production, you'd call an actual AI API like Claude, GPT, etc.
+            
+            const sentences = text.match(/[^\.!\?]+[\.!\?]+/g) || [];
+            let numSentences;
+            
+            switch(length) {
+                case 'short':
+                    numSentences = Math.min(3, sentences.length);
+                    break;
+                case 'medium':
+                    numSentences = Math.min(5, sentences.length);
+                    break;
+                case 'long':
+                    numSentences = Math.min(8, sentences.length);
+                    break;
+                case 'bullets':
+                    const bullets = sentences.slice(0, 5).map((s, i) => `• ${s.trim()}`);
+                    return bullets.join('\n\n');
+                default:
+                    numSentences = 3;
+            }
+            
+            // Simple scoring: prefer sentences with important keywords
+            const scored = sentences.map(sentence => {
+                let score = 0;
+                const words = sentence.toLowerCase().split(/\s+/);
+                
+                // Score based on position (first sentences often important)
+                if (sentences.indexOf(sentence) < 3) score += 2;
+                
+                // Score based on length (medium-length sentences often best)
+                if (words.length > 10 && words.length < 25) score += 1;
+                
+                // Important words
+                const importantWords = ['important', 'significant', 'key', 'major', 'critical', 'essential', 'main', 'primary'];
+                importantWords.forEach(word => {
+                    if (sentence.toLowerCase().includes(word)) score += 1;
+                });
+                
+                return { sentence, score };
+            });
+            
+            // Sort by score and take top sentences
+            scored.sort((a, b) => b.score - a.score);
+            const topSentences = scored.slice(0, numSentences).map(s => s.sentence);
+            
+            // Maintain original order
+            const summary = sentences.filter(s => topSentences.includes(s)).join(' ');
+            
+            return summary;
+        }
+        
+        function updateStats(original, summary) {
+            const originalWords = original.split(/\s+/).length;
+            const summaryWords = summary.split(/\s+/).length;
+            const compression = Math.round((1 - summaryWords / originalWords) * 100);
+            const timeSaved = Math.round((originalWords - summaryWords) / 200); // Assuming 200 words per minute
+            
+            document.getElementById('originalWords').textContent = originalWords;
+            document.getElementById('summaryWords').textContent = summaryWords;
+            document.getElementById('compressionRate').textContent = compression + '%';
+            document.getElementById('readingTime').textContent = Math.max(1, timeSaved);
+            document.getElementById('summaryLength').textContent = summaryWords + ' words';
+            
+            document.getElementById('statsDisplay').classList.remove('hidden');
+        }
+        
+        function copySummary() {
+            const summary = document.getElementById('summaryText').textContent;
+            navigator.clipboard.writeText(summary).then(() => {
+                const btn = event.target.closest('button');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                btn.classList.add('bg-green-700');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                    btn.classList.remove('bg-green-700');
+                }, 2000);
+            });
+        }
+        
+        function downloadSummary() {
+            const summary = document.getElementById('summaryText').textContent;
+            const blob = new Blob([summary], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'summary_' + Date.now() + '.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
