@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Content Writer - Free AI Writing Tool | QuickToolsHub</title>
+    <meta name="description" content="Generate high-quality content using AI in seconds. Free AI content writer for blogs, articles, and more.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-gray-800">QuickToolsHub</h1>
+                        <p class="text-xs text-gray-500">AI Content Writer</p>
+                    </div>
+                </a>
+                <a href="../../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-home mr-2"></i>Back to Home
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <!-- Title Section -->
+            <div class="text-center mb-8">
+                <div class="inline-block bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg mb-4">
+                    <i class="fas fa-robot mr-2"></i>
+                    <span class="font-bold text-xl">AI Content Writer</span>
+                    <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">Powered by AI</span>
+                </div>
+                <p class="text-gray-600 text-lg">Generate high-quality content using advanced AI technology in seconds</p>
+            </div>
+
+            <!-- Main Tool Card -->
+            <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mb-6">
+                <!-- Input Section -->
+                <div class="space-y-6">
+                    <!-- Topic Input -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            <i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Content Topic
+                        </label>
+                        <input type="text" id="topic" placeholder="e.g., Benefits of Digital Marketing, How to Learn Programming" 
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none transition">
+                    </div>
+
+                    <!-- Content Type -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            <i class="fas fa-file-alt text-blue-500 mr-2"></i>Content Type
+                        </label>
+                        <select id="contentType" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none transition">
+                            <option value="blog">Blog Post</option>
+                            <option value="article">Article</option>
+                            <option value="product">Product Description</option>
+                            <option value="social">Social Media Post</option>
+                            <option value="email">Email Content</option>
+                            <option value="paragraph">Single Paragraph</option>
+                        </select>
+                    </div>
+
+                    <!-- Tone Selection -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            <i class="fas fa-comments text-green-500 mr-2"></i>Writing Tone
+                        </label>
+                        <select id="tone" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none transition">
+                            <option value="professional">Professional</option>
+                            <option value="casual">Casual</option>
+                            <option value="friendly">Friendly</option>
+                            <option value="formal">Formal</option>
+                            <option value="persuasive">Persuasive</option>
+                            <option value="informative">Informative</option>
+                        </select>
+                    </div>
+
+                    <!-- Word Count -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            <i class="fas fa-text-width text-orange-500 mr-2"></i>Approximate Length
+                        </label>
+                        <select id="wordCount" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none transition">
+                            <option value="short">Short (150-250 words)</option>
+                            <option value="medium" selected>Medium (300-500 words)</option>
+                            <option value="long">Long (600-800 words)</option>
+                        </select>
+                    </div>
+
+                    <!-- Additional Instructions (Optional) -->
+                    <div>
+                        <label class="block text-sm font-bold text-gray-700 mb-2">
+                            <i class="fas fa-info-circle text-indigo-500 mr-2"></i>Additional Instructions (Optional)
+                        </label>
+                        <textarea id="instructions" rows="3" placeholder="Add any specific requirements, keywords to include, or style preferences..."
+                            class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none transition resize-none"></textarea>
+                    </div>
+
+                    <!-- Generate Button -->
+                    <button id="generateBtn" onclick="generateContent()" 
+                        class="w-full bg-gradient-to-r from-purple-600 to-purple-800 text-white py-4 rounded-lg font-bold text-lg hover:shadow-lg transition transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed">
+                        <i class="fas fa-magic mr-2"></i>Generate Content with AI
+                    </button>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="hidden bg-purple-50 border-2 border-purple-200 rounded-lg p-6 mb-6">
+                <div class="flex items-center justify-center space-x-3">
+                    <div class="animate-spin rounded-full h-8 w-8 border-4 border-purple-600 border-t-transparent"></div>
+                    <span class="text-purple-700 font-medium text-lg">AI is generating your content...</span>
+                </div>
+            </div>
+
+            <!-- Output Section -->
+            <div id="outputSection" class="hidden bg-white rounded-lg shadow-lg p-6 md:p-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        <i class="fas fa-sparkles text-purple-600 mr-2"></i>Generated Content
+                    </h3>
+                    <div class="flex gap-2">
+                        <button onclick="copyContent()" class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition">
+                            <i class="fas fa-copy mr-2"></i>Copy
+                        </button>
+                        <button onclick="downloadContent()" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
+                            <i class="fas fa-download mr-2"></i>Download
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="generatedContent" class="prose max-w-none bg-gray-50 p-6 rounded-lg border-2 border-gray-200 min-h-[300px] whitespace-pre-wrap leading-relaxed"></div>
+                
+                <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-blue-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-blue-600" id="wordCountOutput">0</div>
+                        <div class="text-sm text-gray-600">Words</div>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-green-600" id="charCountOutput">0</div>
+                        <div class="text-sm text-gray-600">Characters</div>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-purple-600" id="sentenceCountOutput">0</div>
+                        <div class="text-sm text-gray-600">Sentences</div>
+                    </div>
+                    <div class="bg-orange-50 p-4 rounded-lg text-center">
+                        <div class="text-2xl font-bold text-orange-600" id="paragraphCountOutput">0</div>
+                        <div class="text-sm text-gray-600">Paragraphs</div>
+                    </div>
+                </div>
+
+                <button onclick="generateNewContent()" class="w-full mt-6 bg-purple-600 text-white py-3 rounded-lg font-bold hover:bg-purple-700 transition">
+                    <i class="fas fa-redo mr-2"></i>Generate New Content
+                </button>
+            </div>
+
+            <!-- Features Info -->
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-bolt text-purple-600 text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">Lightning Fast</h4>
+                    <p class="text-gray-600 text-sm">Generate content in seconds with advanced AI</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-check-circle text-green-600 text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">High Quality</h4>
+                    <p class="text-gray-600 text-sm">AI-powered content that's ready to use</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-gift text-blue-600 text-2xl"></i>
+                    </div>
+                    <h4 class="font-bold text-lg mb-2">100% Free</h4>
+                    <p class="text-gray-600 text-sm">No limits, no signup required</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© 2025 QuickToolsHub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        async function generateContent() {
+            const topic = document.getElementById('topic').value.trim();
+            const contentType = document.getElementById('contentType').value;
+            const tone = document.getElementById('tone').value;
+            const wordCount = document.getElementById('wordCount').value;
+            const instructions = document.getElementById('instructions').value.trim();
+            
+            if (!topic) {
+                alert('Please enter a topic for your content!');
+                return;
+            }
+            
+            // Show loading state
+            document.getElementById('generateBtn').disabled = true;
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('outputSection').classList.add('hidden');
+            
+            // Build the prompt
+            let lengthGuide = '';
+            if (wordCount === 'short') lengthGuide = '150-250 words';
+            else if (wordCount === 'medium') lengthGuide = '300-500 words';
+            else lengthGuide = '600-800 words';
+            
+            const prompt = `Write a ${tone} ${contentType} about "${topic}". 
+Length: approximately ${lengthGuide}
+${instructions ? 'Additional requirements: ' + instructions : ''}
+
+Please write engaging, well-structured content that is informative and valuable to readers. Use proper formatting with paragraphs.`;
+            
+            try {
+                // Call Claude API
+                const response = await fetch('https://api.anthropic.com/v1/messages', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        model: 'claude-sonnet-4-20250514',
+                        max_tokens: 1000,
+                        messages: [
+                            {
+                                role: 'user',
+                                content: prompt
+                            }
+                        ]
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (data.content && data.content[0] && data.content[0].text) {
+                    displayContent(data.content[0].text);
+                } else {
+                    throw new Error('Invalid response from AI');
+                }
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Sorry, there was an error generating content. Please try again.');
+            } finally {
+                document.getElementById('generateBtn').disabled = false;
+                document.getElementById('loadingState').classList.add('hidden');
+            }
+        }
+        
+        function displayContent(content) {
+            document.getElementById('generatedContent').textContent = content;
+            document.getElementById('outputSection').classList.remove('hidden');
+            
+            // Calculate statistics
+            const words = content.trim().split(/\s+/).filter(w => w.length > 0);
+            const chars = content.length;
+            const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
+            const paragraphs = content.split(/\n\n+/).filter(p => p.trim().length > 0);
+            
+            document.getElementById('wordCountOutput').textContent = words.length;
+            document.getElementById('charCountOutput').textContent = chars;
+            document.getElementById('sentenceCountOutput').textContent = sentences.length;
+            document.getElementById('paragraphCountOutput').textContent = paragraphs.length;
+            
+            // Scroll to output
+            document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function copyContent() {
+            const content = document.getElementById('generatedContent').textContent;
+            navigator.clipboard.writeText(content).then(() => {
+                const btn = event.target.closest('button');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check mr-2"></i>Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalHTML;
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy content. Please select and copy manually.');
+            });
+        }
+        
+        function downloadContent() {
+            const content = document.getElementById('generatedContent').textContent;
+            const topic = document.getElementById('topic').value.trim() || 'content';
+            const filename = topic.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '.txt';
+            
+            const blob = new Blob([content], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+        
+        function generateNewContent() {
+            document.getElementById('outputSection').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Allow Enter key in topic field
+        document.getElementById('topic').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                generateContent();
+            }
+        });
+    </script>
+</body>
+</html>
