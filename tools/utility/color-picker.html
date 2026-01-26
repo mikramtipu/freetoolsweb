@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tool Name - QuickToolsHub</title>
+    <meta name="description" content="Tool description for SEO">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="../../index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-gray-800">QuickToolsHub</h1>
+                        <p class="text-xs text-gray-500">100+ Free Tools</p>
+                    </div>
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="../../index.html" class="text-gray-700 hover:text-blue-600"><i class="fas fa-home mr-1"></i>Home</a>
+                    <a href="../../index.html#tools" class="text-gray-700 hover:text-blue-600"><i class="fas fa-tools mr-1"></i>All Tools</a>
+                    <a href="../../blog.html" class="text-gray-700 hover:text-blue-600"><i class="fas fa-blog mr-1"></i>Blog</a>
+                </nav>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
+            
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="../../index.html" class="block py-2"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="../../index.html#tools" class="block py-2"><i class="fas fa-tools mr-2"></i>All Tools</a>
+                <a href="../../blog.html" class="block py-2"><i class="fas fa-blog mr-2"></i>Blog</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex items-center text-sm text-gray-600">
+                <a href="../../index.html" class="hover:text-blue-600"><i class="fas fa-home mr-1"></i>Home</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <a href="../../index.html#tools" class="hover:text-blue-600">Tools</a>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span id="categoryName" class="text-gray-800 font-medium">Category</span>
+                <i class="fas fa-chevron-right mx-2 text-xs"></i>
+                <span id="toolName" class="text-gray-800 font-medium">Tool Name</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tool Header -->
+    <section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <div class="inline-block bg-white/20 px-4 py-1 rounded-full text-sm mb-4">
+                    <i id="toolIcon" class="fas fa-robot mr-2"></i>
+                    <span id="toolCategory">AI Tools</span>
+                </div>
+                <h1 id="mainToolTitle" class="text-4xl md:text-5xl font-bold mb-4">Tool Name</h1>
+                <p id="toolDescription" class="text-xl opacity-90 mb-6">Tool description goes here</p>
+                <div class="flex flex-wrap justify-center gap-3 text-sm">
+                    <span class="bg-white/20 px-4 py-2 rounded-full"><i class="fas fa-bolt mr-2"></i>Fast</span>
+                    <span class="bg-white/20 px-4 py-2 rounded-full"><i class="fas fa-gift mr-2"></i>Free</span>
+                    <span class="bg-white/20 px-4 py-2 rounded-full"><i class="fas fa-lock mr-2"></i>Secure</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tool Interface -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8">
+                    <!-- Tool content will be inserted here -->
+                    <div id="toolInterface">
+                        <!-- Example Interface -->
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-keyboard mr-2"></i>Input
+                                </label>
+                                <textarea id="inputText" rows="8" class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none resize-none" placeholder="Enter your text here..."></textarea>
+                                <div class="flex justify-between items-center mt-2 text-sm text-gray-500">
+                                    <span id="charCount">0 characters</span>
+                                    <button onclick="clearInput()" class="text-red-500 hover:text-red-600">
+                                        <i class="fas fa-trash mr-1"></i>Clear
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex gap-3">
+                                <button onclick="processTool()" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition">
+                                    <i class="fas fa-magic mr-2"></i>Generate Result
+                                </button>
+                                <button onclick="copyResult()" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+
+                            <div id="resultSection" class="hidden">
+                                <label class="block text-sm font-medium text-gray-700 mb-2">
+                                    <i class="fas fa-check-circle text-green-600 mr-2"></i>Result
+                                </label>
+                                <div id="outputText" class="w-full px-4 py-3 bg-gray-50 border-2 border-gray-200 rounded-lg min-h-[200px]"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Use -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mt-6">
+                    <h2 class="text-2xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-question-circle text-blue-600 mr-3"></i>
+                        How to Use This Tool?
+                    </h2>
+                    <ol class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">1</span>
+                            <span>Enter your text in the input box above</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">2</span>
+                            <span>Click the "Generate Result" button</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm mr-3 mt-0.5 flex-shrink-0">3</span>
+                            <span>View and copy your results instantly</span>
+                        </li>
+                    </ol>
+                </div>
+
+                <!-- Features -->
+                <div class="bg-white rounded-lg shadow-lg p-6 md:p-8 mt-6">
+                    <h2 class="text-2xl font-bold mb-6 flex items-center">
+                        <i class="fas fa-star text-yellow-500 mr-3"></i>
+                        Key Features
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-blue-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-bolt text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Lightning Fast</h3>
+                                <p class="text-sm text-gray-600">Get instant results in seconds</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-green-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-gift text-green-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">100% Free</h3>
+                                <p class="text-sm text-gray-600">No sign-up or payment required</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-purple-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lock text-purple-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Secure & Private</h3>
+                                <p class="text-sm text-gray-600">Your data stays on your device</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="bg-yellow-100 w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-mobile-alt text-yellow-600"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">Mobile Friendly</h3>
+                                <p class="text-sm text-gray-600">Works on all devices</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Tools -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-2xl font-bold mb-6 flex items-center">
+                    <i class="fas fa-tools text-blue-600 mr-3"></i>
+                    Related Tools
+                </h2>
+                <div id="relatedTools" class="grid md:grid-cols-3 gap-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Tools Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-8 text-center">
+                    <i class="fas fa-th-large text-blue-600 mr-3"></i>
+                    Browse All Tools by Category
+                </h2>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" id="allToolsCategories">
+                    <!-- Categories will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+                <div>
+                    <h3 class="font-bold mb-3"><i class="fas fa-tools mr-2"></i>QuickToolsHub</h3>
+                    <p class="text-gray-400 text-xs">Free tools for everyone</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-1 text-gray-400 text-xs">
+                        <li><a href="../../blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="../../about.html" class="hover:text-white">About</a></li>
+                        <li><a href="../../contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Categories</h4>
+                    <ul class="space-y-1 text-gray-400 text-xs">
+                        <li><a href="../../index.html#tools" class="hover:text-white">AI Tools</a></li>
+                        <li><a href="../../index.html#tools" class="hover:text-white">SEO Tools</a></li>
+                        <li><a href="../../index.html#tools" class="hover:text-white">Student Tools</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-3">Connect</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-xs text-gray-400">
+                <p>© 2025 QuickToolsHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // All tools data structure
+        const allTools = {
+            ai: {
+                name: 'AI Tools',
+                icon: 'fa-robot',
+                color: 'purple',
+                tools: [
+                    'AI Content Writer', 'AI Paraphraser', 'AI Grammar Checker', 'AI Summarizer',
+                    'AI Essay Writer', 'AI Email Generator', 'AI Story Generator', 'AI Resume Builder',
+                    'AI Chatbot', 'AI Blog Post Generator', 'AI Product Description', 'AI Headline Generator',
+                    'AI Code Generator', 'AI Translator', 'AI Text Improver', 'AI Video Script Writer',
+                    'AI Cover Letter Generator', 'AI Article Rewriter'
+                ]
+            },
+            seo: {
+                name: 'SEO Tools',
+                icon: 'fa-chart-line',
+                color: 'green',
+                tools: [
+                    'Keyword Density Checker', 'Meta Title Generator', 'Meta Description Generator',
+                    'Word Counter', 'Plagiarism Checker', 'Keyword Research Tool', 'Backlink Checker',
+                    'Domain Authority Checker', 'XML Sitemap Generator', 'Robots.txt Generator',
+                    'SEO Score Checker', 'Redirect Checker'
+                ]
+            },
+            social: {
+                name: 'Social Media',
+                icon: 'fa-youtube',
+                color: 'red',
+                tools: [
+                    'YouTube Title Generator', 'YouTube Description Generator', 'Instagram Caption Generator',
+                    'YouTube Hashtag Generator', 'TikTok Caption Generator', 'Twitter Thread Generator',
+                    'Facebook Post Generator', 'LinkedIn Post Generator', 'Pinterest Description Generator',
+                    'Social Media Bio Generator', 'YouTube Tag Generator', 'Instagram Reel Ideas Generator'
+                ]
+            },
+            student: {
+                name: 'Student Tools',
+                icon: 'fa-graduation-cap',
+                color: 'blue',
+                tools: [
+                    'GPA Calculator', 'Percentage Calculator', 'Scientific Calculator', 'Age Calculator',
+                    'BMI Calculator', 'Currency Converter', 'Unit Converter', 'Random Number Generator',
+                    'Essay Grader', 'Citation Generator', 'Grade Calculator', 'Time Zone Converter'
+                ]
+            },
+            utility: {
+                name: 'Utility Tools',
+                icon: 'fa-wrench',
+                color: 'orange',
+                tools: [
+                    'PDF to Word Converter', 'Image Compressor', 'QR Code Generator', 'Password Generator',
+                    'Base64 Encoder/Decoder', 'JSON Formatter', 'URL Shortener', 'Color Picker',
+                    'Lorem Ipsum Generator', 'Markdown Editor', 'Case Converter', 'Text to Speech',
+                    'Speech to Text', 'Reverse Text Generator', 'Remove Line Breaks'
+                ]
+            },
+            earning: {
+                name: 'Earning Tools',
+                icon: 'fa-dollar-sign',
+                color: 'green',
+                tools: [
+                    'AdSense Revenue Calculator', 'YouTube Earning Calculator', 'Invoice Generator',
+                    'Freelance Rate Calculator', 'ROI Calculator', 'Salary Calculator',
+                    'Tax Calculator', 'Crypto Profit Calculator'
+                ]
+            },
+            design: {
+                name: 'Design Tools',
+                icon: 'fa-palette',
+                color: 'pink',
+                tools: [
+                    'Background Remover', 'Image Resizer', 'Thumbnail Maker', 'Logo Maker',
+                    'Meme Generator', 'Screenshot Tool', 'Favicon Generator', 'Watermark Tool'
+                ]
+            },
+            webdev: {
+                name: 'Web Dev Tools',
+                icon: 'fa-code',
+                color: 'indigo',
+                tools: [
+                    'Website Speed Test', 'HTML Minifier', 'CSS Minifier', 'JavaScript Minifier',
+                    'Responsive Design Checker', 'Meta Tag Generator', 'Open Graph Generator'
+                ]
+            }
+        };
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+
+        // Character counter
+        const input = document.getElementById('inputText');
+        if (input) {
+            input.addEventListener('input', function() {
+                document.getElementById('charCount').textContent = this.value.length + ' characters';
+            });
+        }
+
+        // Clear input
+        function clearInput() {
+            document.getElementById('inputText').value = '';
+            document.getElementById('charCount').textContent = '0 characters';
+            document.getElementById('resultSection').classList.add('hidden');
+        }
+
+        // Process tool (example function)
+        function processTool() {
+            const input = document.getElementById('inputText').value;
+            if (!input.trim()) {
+                alert('Please enter some text!');
+                return;
+            }
+            
+            // Show result section
+            document.getElementById('resultSection').classList.remove('hidden');
+            
+            // Example processing - replace with actual tool logic
+            document.getElementById('outputText').textContent = 'Processing: ' + input;
+            
+            // Smooth scroll to result
+            document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Copy result
+        function copyResult() {
+            const result = document.getElementById('outputText').textContent;
+            if (!result || result === '') {
+                alert('No result to copy!');
+                return;
+            }
+            
+            navigator.clipboard.writeText(result).then(() => {
+                const btn = event.target.closest('button');
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i>';
+                setTimeout(() => btn.innerHTML = original, 2000);
+            });
+        }
+
+        // Load all tools categories
+        function loadAllToolsCategories() {
+            const container = document.getElementById('allToolsCategories');
+            let html = '';
+            
+            for (const [key, data] of Object.entries(allTools)) {
+                html += `
+                    <div class="bg-white rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" onclick="showCategoryTools('${key}')">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="bg-${data.color}-100 w-12 h-12 rounded-lg flex items-center justify-center">
+                                <i class="fas ${data.icon} text-${data.color}-600 text-xl"></i>
+                            </div>
+                            <span class="bg-${data.color}-100 text-${data.color}-700 px-3 py-1 rounded-full text-sm font-bold">${data.tools.length}</span>
+                        </div>
+                        <h3 class="font-bold text-gray-800">${data.name}</h3>
+                        <p class="text-xs text-gray-500 mt-1">Click to view all tools</p>
+                    </div>
+                `;
+            }
+            
+            container.innerHTML = html;
+        }
+
+        // Show category tools in modal or expand
+        function showCategoryTools(category) {
+            const data = allTools[category];
+            const toolsList = data.tools.map(tool => `
+                <div class="bg-gray-50 p-3 rounded hover:bg-gray-100 transition">
+                    <i class="fas fa-check-circle text-${data.color}-600 mr-2"></i>${tool}
+                </div>
+            `).join('');
+            
+            // Create modal
+            const modal = document.createElement('div');
+            modal.className = 'fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4';
+            modal.innerHTML = `
+                <div class="bg-white rounded-lg max-w-2xl w-full max-h-[80vh] overflow-y-auto">
+                    <div class="p-6">
+                        <div class="flex justify-between items-center mb-6">
+                            <h2 class="text-2xl font-bold">
+                                <i class="fas ${data.icon} text-${data.color}-600 mr-2"></i>${data.name}
+                            </h2>
+                            <button onclick="this.closest('.fixed').remove()" class="text-gray-500 hover:text-gray-700 text-2xl">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <div class="grid gap-2">
+                            ${toolsList}
+                        </div>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(modal);
+        }
+
+        // Initialize
+        loadAllToolsCategories();
+    </script>
+</body>
+</html>
