@@ -88,39 +88,63 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-8">
+    <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
                 <div>
-                    <h3 class="font-bold mb-3"><i class="fas fa-tools mr-2"></i>QuickToolsHub</h3>
-                    <p class="text-gray-400 text-xs">Free tools for everyone</p>
+                    <h3 class="font-bold text-lg mb-4">
+                        <i class="fas fa-tools mr-2"></i>QuickToolsHub
+                    </h3>
+                    <p class="text-gray-400 text-sm">Free online tools for everyone. Fast, simple, and secure.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-3">Quick Links</h4>
-                    <ul class="space-y-1 text-gray-400 text-xs">
-                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
-                        <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    <h4 class="font-bold mb-4">Categories</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#tools" onclick="filterTools('ai')" class="hover:text-white transition"><i class="fas fa-robot mr-2"></i>AI Tools</a></li>
+                        <li><a href="#tools" onclick="filterTools('seo')" class="hover:text-white transition"><i class="fas fa-chart-line mr-2"></i>SEO Tools</a></li>
+                        <li><a href="#tools" onclick="filterTools('social')" class="hover:text-white transition"><i class="fab fa-youtube mr-2"></i>Social Media</a></li>
+                        <li><a href="#tools" onclick="filterTools('student')" class="hover:text-white transition"><i class="fas fa-graduation-cap mr-2"></i>Student Tools</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-3">Categories</h4>
-                    <ul class="space-y-1 text-gray-400 text-xs">
-                        <li><a href="#" onclick="filterTools('ai')" class="hover:text-white">AI Tools</a></li>
-                        <li><a href="#" onclick="filterTools('seo')" class="hover:text-white">SEO Tools</a></li>
-                        <li><a href="#" onclick="filterTools('student')" class="hover:text-white">Student Tools</a></li>
+                    <h4 class="font-bold mb-4">More Categories</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#tools" onclick="filterTools('utility')" class="hover:text-white transition"><i class="fas fa-wrench mr-2"></i>Utility Tools</a></li>
+                        <li><a href="#tools" onclick="filterTools('earning')" class="hover:text-white transition"><i class="fas fa-dollar-sign mr-2"></i>Earning Tools</a></li>
+                        <li><a href="#tools" onclick="filterTools('design')" class="hover:text-white transition"><i class="fas fa-palette mr-2"></i>Design Tools</a></li>
+                        <li><a href="#tools" onclick="filterTools('webdev')" class="hover:text-white transition"><i class="fas fa-code mr-2"></i>Web Dev Tools</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-3">Connect</h4>
-                    <div class="flex gap-3">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="resources.html" class="hover:text-white transition">Resources</a></li>
+                        <li><a href="tutorials.html" class="hover:text-white transition">Tutorials</a></li>
+                        <li><a href="comparisons.html" class="hover:text-white transition">Comparisons</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal & Connect</h4>
+                    <ul class="space-y-2 text-sm text-gray-400 mb-4">
+                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
+                            <i class="fab fa-instagram"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-xs text-gray-400">
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
                 <p>© 2025 QuickToolsHub. All rights reserved.</p>
             </div>
         </div>
