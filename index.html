@@ -3,690 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>QuickToolsHub - 100+ Free AI Tools, SEO Tools & Student Calculators 2025</title>
-    <meta name="title" content="QuickToolsHub - 100+ Free AI Tools, SEO Tools & Student Calculators 2025">
+    <title>QuickToolsHub - 100+ Free AI Tools, SEO Tools & Calculators 2025</title>
     <meta name="description" content="Free online AI content writer, paraphraser, SEO tools, YouTube title generator, GPA calculator & 100+ tools for students, bloggers, and content creators. No signup required!">
-    <meta name="keywords" content="free AI tools, AI content writer, paraphraser, SEO tools, keyword density checker, YouTube tools, student calculator, GPA calculator, online earning tools, Pakistan tools, free online tools">
-    <meta name="author" content="QuickToolsHub">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Preconnect for Performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="bg-gray-50">
     <!-- Header -->
-    <!-- Header -->
-<header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto px-4 py-4">
-        <div class="flex justify-between items-center">
-            <!-- Logo with Image -->
-            <a href="index.html" class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-tools text-white text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="font-bold text-xl text-gray-800">QuickToolsHub</h1>
-                    <p class="text-xs text-gray-500">100+ Free Tools</p>
-                </div>
-            </a>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-tools text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-xl text-gray-800">QuickToolsHub</h1>
+                        <p class="text-xs text-gray-500">100+ Free Tools</p>
+                    </div>
+                </a>
+                
+                <nav class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 font-medium"><i class="fas fa-home mr-1"></i>Home</a>
+                    <a href="#tools" class="text-gray-700 hover:text-blue-600 font-medium"><i class="fas fa-tools mr-1"></i>Tools</a>
+                    <a href="blog.html" class="text-gray-700 hover:text-blue-600 font-medium"><i class="fas fa-blog mr-1"></i>Blog</a>
+                    <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg"><i class="fas fa-envelope mr-1"></i>Contact</a>
+                </nav>
+                
+                <button id="mobileMenuBtn" class="md:hidden text-gray-700"><i class="fas fa-bars text-2xl"></i></button>
+            </div>
             
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex items-center space-x-8">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-home mr-2"></i>Home
-                </a>
-                <a href="#tools" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-tools mr-2"></i>Tools
-                </a>
-                <a href="blog.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-blog mr-2"></i>Blog
-                </a>
-                <a href="resources.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-book mr-2"></i>Resources
-                </a>
-                <a href="tutorials.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-chalkboard-teacher mr-2"></i>Tutorials
-                </a>
-                <a href="comparisons.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-balance-scale mr-2"></i>Compare
-                </a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-600 font-medium transition flex items-center">
-                    <i class="fas fa-info-circle mr-2"></i>About
-                </a>
-                <a href="contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition flex items-center">
-                    <i class="fas fa-envelope mr-2"></i>Contact
-                </a>
-            </nav>
-            
-            <!-- Mobile Menu Button -->
-            <button id="mobileMenuBtn" class="md:hidden text-gray-700">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+            <div id="mobileMenu" class="hidden md:hidden mt-4 space-y-2">
+                <a href="#" class="block py-2"><i class="fas fa-home mr-2"></i>Home</a>
+                <a href="#tools" class="block py-2"><i class="fas fa-tools mr-2"></i>Tools</a>
+                <a href="blog.html" class="block py-2"><i class="fas fa-blog mr-2"></i>Blog</a>
+                <a href="contact.html" class="block py-2"><i class="fas fa-envelope mr-2"></i>Contact</a>
+            </div>
         </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden mt-4 pb-4 space-y-2">
-            <a href="index.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-home mr-2"></i>Home
-            </a>
-            <a href="#tools" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-tools mr-2"></i>Tools
-            </a>
-            <a href="blog.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-blog mr-2"></i>Blog
-            </a>
-            <a href="resources.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-book mr-2"></i>Resources
-            </a>
-            <a href="tutorials.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-chalkboard-teacher mr-2"></i>Tutorials
-            </a>
-            <a href="comparisons.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-balance-scale mr-2"></i>Compare
-            </a>
-            <a href="about.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-info-circle mr-2"></i>About
-            </a>
-            <a href="contact.html" class="block text-gray-700 hover:text-blue-600 py-2 flex items-center">
-                <i class="fas fa-envelope mr-2"></i>Contact
-            </a>
-        </div>
-    </div>
-</header>
+    </header>
 
     <!-- Hero Section -->
-    <section id="home" class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-20">
+    <section class="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16">
         <div class="container mx-auto px-4 text-center">
             <div class="mb-6">
                 <div class="inline-block bg-white/20 px-6 py-2 rounded-full backdrop-blur">
                     <i class="fas fa-fire text-yellow-300 mr-2"></i>
-                    <span class="font-bold">Trending: AI Content Writer, YouTube Tools & More!</span>
+                    <span class="font-bold">100+ Free Tools Available!</span>
                 </div>
             </div>
-            <h1 class="text-5xl md:text-6xl font-bold mb-4">100+ Free Online Tools</h1>
-            <p class="text-xl md:text-2xl mb-8">AI Tools | SEO Tools | Student Tools | YouTube Tools | Earning Calculators</p>
-            <div class="max-w-2xl mx-auto mb-8">
-                <input type="text" id="searchTools" placeholder="Search for AI tools, calculators, converters..." 
-                    class="w-full px-6 py-4 rounded-lg text-gray-800 text-lg focus:outline-none focus:ring-4 focus:ring-purple-300 shadow-lg">
-            </div>
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
-                    <i class="fas fa-robot mr-2"></i>
-                    <span>AI Powered</span>
-                </div>
-                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
-                    <i class="fas fa-bolt mr-2"></i>
-                    <span>Super Fast</span>
-                </div>
-                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
-                    <i class="fas fa-gift mr-2"></i>
-                    <span>100% Free</span>
-                </div>
-                <div class="bg-white/20 px-6 py-3 rounded-lg backdrop-blur">
-                    <i class="fas fa-lock mr-2"></i>
-                    <span>Secure</span>
-                </div>
-            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Free Online Tools for Everyone</h1>
+            <p class="text-xl mb-8">AI Tools | SEO Tools | Student Tools | YouTube Tools | Utility Tools</p>
+            <input type="text" id="searchTools" placeholder="Search tools..." class="w-full max-w-2xl mx-auto px-6 py-4 rounded-lg text-gray-800 text-lg focus:outline-none">
         </div>
     </section>
 
     <!-- Category Tabs -->
-    <section class="bg-white shadow-sm py-6">
+    <section class="bg-white shadow-sm py-4 sticky top-20 z-40">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap gap-3 justify-center">
-                <button onclick="filterTools('all')" class="category-btn active px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-home mr-2"></i>All Tools
-                </button>
-                <button onclick="filterTools('ai')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-robot mr-2"></i>AI Tools
-                </button>
-                <button onclick="filterTools('seo')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-chart-line mr-2"></i>SEO Tools
-                </button>
-                <button onclick="filterTools('social')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fab fa-youtube mr-2"></i>Social Media
-                </button>
-                <button onclick="filterTools('student')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-graduation-cap mr-2"></i>Student Tools
-                </button>
-                <button onclick="filterTools('utility')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-wrench mr-2"></i>Utility Tools
-                </button>
-                <button onclick="filterTools('earning')" class="category-btn px-6 py-2 rounded-lg font-medium transition">
-                    <i class="fas fa-dollar-sign mr-2"></i>Earning Tools
-                </button>
+            <div class="flex flex-wrap gap-2 justify-center text-sm">
+                <button onclick="filterTools('all')" class="category-btn active px-4 py-2 rounded-lg font-medium"><i class="fas fa-home mr-1"></i>All</button>
+                <button onclick="filterTools('ai')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-robot mr-1"></i>AI Tools</button>
+                <button onclick="filterTools('seo')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-chart-line mr-1"></i>SEO</button>
+                <button onclick="filterTools('social')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fab fa-youtube mr-1"></i>Social</button>
+                <button onclick="filterTools('student')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-graduation-cap mr-1"></i>Student</button>
+                <button onclick="filterTools('utility')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-wrench mr-1"></i>Utility</button>
+                <button onclick="filterTools('earning')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-dollar-sign mr-1"></i>Earning</button>
+                <button onclick="filterTools('design')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-palette mr-1"></i>Design</button>
+                <button onclick="filterTools('webdev')" class="category-btn px-4 py-2 rounded-lg font-medium"><i class="fas fa-code mr-1"></i>Web Dev</button>
             </div>
         </div>
     </section>
 
-    <!-- Tools Section -->
+    <!-- Tools Grid -->
     <section id="tools" class="py-12">
         <div class="container mx-auto px-4">
-            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">
-                <i class="fas fa-fire text-orange-500 mr-2"></i>Popular Tools
-            </h2>
-            
-            <!-- AI TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg">
-                        <i class="fas fa-robot mr-2"></i>
-                        <span class="font-bold text-xl">AI Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">9 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-purple-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-robot text-purple-600 mr-2"></i>AI Content Writer
-                            </h3>
-                            <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">HOT</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Generate high-quality content using AI in seconds</p>
-                        <a href="tools/ai-tools/ai-content-writer.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-exchange-alt text-purple-600 mr-2"></i>AI Paraphraser
-                            </h3>
-                            <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Rewrite text with AI to avoid plagiarism</p>
-                        <a href="tools/ai-tools/ai-paraphraser.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-check-circle text-purple-600 mr-2"></i>AI Grammar Checker
-                        </h3>
-                        <p class="text-gray-600 mb-4">Fix grammar & spelling mistakes instantly</p>
-                        <a href="tools/ai-tools/ai-grammar-checker.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-compress-alt text-purple-600 mr-2"></i>AI Summarizer
-                        </h3>
-                        <p class="text-gray-600 mb-4">Summarize long articles in seconds with AI</p>
-                        <a href="tools/ai-tools/ai-summarizer.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-file-alt text-purple-600 mr-2"></i>AI Essay Writer
-                        </h3>
-                        <p class="text-gray-600 mb-4">Write essays & articles using AI technology</p>
-                        <a href="tools/ai-tools/ai-essay-writer.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-envelope text-purple-600 mr-2"></i>AI Email Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Generate professional emails with AI</p>
-                        <a href="tools/ai-tools/ai-email-generator.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-book text-purple-600 mr-2"></i>AI Story Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Create creative stories with AI assistance</p>
-                        <a href="tools/ai-tools/ai-story-generator.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-file-invoice text-purple-600 mr-2"></i>AI Resume Builder
-                        </h3>
-                        <p class="text-gray-600 mb-4">Build professional resumes using AI</p>
-                        <a href="tools/ai-tools/ai-resume-builder.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="ai">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-comments text-purple-600 mr-2"></i>AI Chatbot
-                        </h3>
-                        <p class="text-gray-600 mb-4">Chat with AI assistant for quick answers</p>
-                        <a href="tools/ai-tools/ai-chatbot.html" class="block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEO TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white px-6 py-3 rounded-lg">
-                        <i class="fas fa-chart-line mr-2"></i>
-                        <span class="font-bold text-xl">SEO Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">4 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-green-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="seo">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-key text-green-600 mr-2"></i>Keyword Density Checker
-                            </h3>
-                            <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Check keyword density for SEO optimization</p>
-                        <a href="tools/seo-tools/keyword-density-checker.html" class="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="seo">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-heading text-green-600 mr-2"></i>Meta Title Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Create SEO-friendly meta titles instantly</p>
-                        <a href="tools/seo-tools/meta-title-generator.html" class="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="seo">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-align-left text-green-600 mr-2"></i>Meta Description Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Generate perfect meta descriptions for SEO</p>
-                        <a href="tools/seo-tools/meta-description-generator.html" class="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="seo">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-font text-green-600 mr-2"></i>Word Counter
-                        </h3>
-                        <p class="text-gray-600 mb-4">Count words, characters & sentences instantly</p>
-                        <button onclick="openTool('wordCounter')" class="w-full bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SOCIAL MEDIA TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 py-3 rounded-lg">
-                        <i class="fab fa-youtube mr-2"></i>
-                        <span class="font-bold text-xl">Social Media Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">4 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-red-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="social">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fab fa-youtube text-red-600 mr-2"></i>YouTube Title Generator
-                            </h3>
-                            <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">HOT</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Generate catchy YouTube video titles</p>
-                        <a href="tools/social-media-tools/youtube-title-generator.html" class="block bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="social">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fab fa-youtube text-red-600 mr-2"></i>YouTube Description Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Create SEO-optimized YouTube descriptions</p>
-                        <a href="tools/social-media-tools/youtube-description-generator.html" class="block bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="social">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fab fa-instagram text-pink-600 mr-2"></i>Instagram Caption Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Generate engaging Instagram captions</p>
-                        <a href="tools/social-media-tools/instagram-caption-generator.html" class="block bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="social">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-hashtag text-blue-600 mr-2"></i>YouTube Hashtag Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Find trending hashtags for YouTube videos</p>
-                        <a href="tools/social-media-tools/youtube-hashtag-generator.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- STUDENT TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg">
-                        <i class="fas fa-graduation-cap mr-2"></i>
-                        <span class="font-bold text-xl">Student Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">3 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-blue-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="student">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-calculator text-blue-600 mr-2"></i>GPA Calculator
-                            </h3>
-                            <span class="bg-yellow-400 text-yellow-900 text-xs font-bold px-2 py-1 rounded">POPULAR</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Calculate your GPA & CGPA instantly</p>
-                        <a href="tools/student-tools/gpa-calculator.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="student">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-percent text-blue-600 mr-2"></i>Percentage Calculator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Calculate percentages & marks easily</p>
-                        <a href="tools/student-tools/percentage-calculator.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="student">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-square-root-alt text-blue-600 mr-2"></i>Scientific Calculator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Advanced calculator for students</p>
-                        <a href="tools/student-tools/scientific-calculator.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- UTILITY TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg">
-                        <i class="fas fa-wrench mr-2"></i>
-                        <span class="font-bold text-xl">Utility Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">4 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-orange-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="utility">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-file-pdf text-orange-600 mr-2"></i>PDF to Word
-                            </h3>
-                            <span class="bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">HOT</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Convert PDF files to Word documents</p>
-                        <a href="tools/utility-tools/pdf-to-word.html" class="block bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="utility">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-compress text-blue-600 mr-2"></i>Image Compressor
-                        </h3>
-                        <p class="text-gray-600 mb-4">Reduce image size without quality loss</p>
-                        <button onclick="openTool('imageCompressor')" class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </button>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="utility">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-qrcode text-indigo-600 mr-2"></i>QR Code Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Create QR codes for URLs & text</p>
-                        <button onclick="openTool('qrGenerator')" class="w-full bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </button>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="utility">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-lock text-gray-700 mr-2"></i>Password Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Generate strong & secure passwords</p>
-                        <a href="tools/utility-tools/password-generator.html" class="block bg-gray-700 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- EARNING TOOLS SECTION -->
-            <div class="mb-16">
-                <div class="flex items-center mb-6">
-                    <div class="bg-gradient-to-r from-green-600 to-teal-600 text-white px-6 py-3 rounded-lg">
-                        <i class="fas fa-dollar-sign mr-2"></i>
-                        <span class="font-bold text-xl">Earning Tools</span>
-                        <span class="ml-2 bg-white/20 px-2 py-1 rounded text-sm">3 Tools</span>
-                    </div>
-                    <div class="flex-grow h-1 bg-green-200 ml-4 rounded"></div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="earning">
-                        <div class="flex items-center justify-between mb-4">
-                            <h3 class="text-xl font-bold text-gray-800">
-                                <i class="fas fa-ad text-green-600 mr-2"></i>AdSense Revenue Calculator
-                            </h3>
-                            <span class="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded">$</span>
-                        </div>
-                        <p class="text-gray-600 mb-4">Calculate your AdSense earnings</p>
-                        <a href="tools/earning-tools/adsense-calculator.html" class="block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="earning">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fab fa-youtube text-red-600 mr-2"></i>YouTube Earning Calculator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Estimate YouTube revenue potential</p>
-                        <a href="tools/earning-tools/youtube-earning-calculator.html" class="block bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-
-                    <div class="tool-card bg-white rounded-lg shadow-md hover:shadow-xl transition p-6 border border-gray-200" data-category="earning">
-                        <h3 class="text-xl font-bold text-gray-800 mb-4">
-                            <i class="fas fa-file-invoice-dollar text-blue-600 mr-2"></i>Invoice Generator
-                        </h3>
-                        <p class="text-gray-600 mb-4">Create professional invoices for free</p>
-                        <a href="tools/earning-tools/invoice-generator.html" class="block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition text-center">
-                            <i class="fas fa-arrow-right mr-2"></i>Use Tool
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Quick Links to New Sections -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mt-16 mb-12">
-                <a href="blog.html" class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 hover:shadow-lg transition group">
-                    <div class="bg-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-blog text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Blog Articles</h3>
-                    <p class="text-gray-600 text-sm">Educational guides & tutorials</p>
-                </a>
-
-                <a href="resources.html" class="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 hover:shadow-lg transition group">
-                    <div class="bg-green-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-book text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Resources</h3>
-                    <p class="text-gray-600 text-sm">Free downloads & templates</p>
-                </a>
-
-                <a href="tutorials.html" class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-lg p-6 hover:shadow-lg transition group">
-                    <div class="bg-purple-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-chalkboard-teacher text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Tutorials</h3>
-                    <p class="text-gray-600 text-sm">Step-by-step guides</p>
-                </a>
-
-                <a href="comparisons.html" class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-lg p-6 hover:shadow-lg transition group">
-                    <div class="bg-orange-600 text-white w-12 h-12 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition">
-                        <i class="fas fa-balance-scale text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Comparisons</h3>
-                    <p class="text-gray-600 text-sm">Tool reviews & comparisons</p>
-                </a>
-            </div>
-
-            <!-- View All Tools Button -->
-            <div class="text-center mt-12">
-                <a href="#tools" class="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:shadow-lg transition">
-                    <i class="fas fa-th-large mr-2"></i>View All 100+ Tools
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tool Modal -->
-    <div id="toolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-            <div class="p-6">
-                <div class="flex justify-between items-center mb-6">
-                    <h2 id="modalTitle" class="text-2xl font-bold text-gray-800"></h2>
-                    <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700 text-2xl">
-                        <i class="fas fa-times"></i>
-                    </button>
-                </div>
-                <div id="modalContent"></div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Features Section -->
-    <section class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Why Choose QuickToolsHub?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="text-center p-6">
-                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-bolt text-blue-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Lightning Fast</h3>
-                    <p class="text-gray-600">All tools run instantly in your browser. No waiting, no delays.</p>
-                </div>
-                <div class="text-center p-6">
-                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-lock text-green-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">100% Secure</h3>
-                    <p class="text-gray-600">Your data never leaves your device. Complete privacy guaranteed.</p>
-                </div>
-                <div class="text-center p-6">
-                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-gift text-purple-600 text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-2">Completely Free</h3>
-                    <p class="text-gray-600">No sign-up required. No hidden fees. Free forever.</p>
-                </div>
-            </div>
+            <div id="toolsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4"></div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-12">
+    <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
                 <div>
-                    <h3 class="font-bold text-lg mb-4">
-                        <i class="fas fa-tools mr-2"></i>QuickToolsHub
-                    </h3>
-                    <p class="text-gray-400 text-sm">Free online tools for everyone. Fast, simple, and secure.</p>
+                    <h3 class="font-bold mb-3"><i class="fas fa-tools mr-2"></i>QuickToolsHub</h3>
+                    <p class="text-gray-400 text-xs">Free tools for everyone</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="resources.html" class="hover:text-white transition">Resources</a></li>
-                        <li><a href="tutorials.html" class="hover:text-white transition">Tutorials</a></li>
-                        <li><a href="comparisons.html" class="hover:text-white transition">Comparisons</a></li>
+                    <h4 class="font-bold mb-3">Quick Links</h4>
+                    <ul class="space-y-1 text-gray-400 text-xs">
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="contact.html" class="hover:text-white transition">Contact</a></li>
+                    <h4 class="font-bold mb-3">Categories</h4>
+                    <ul class="space-y-1 text-gray-400 text-xs">
+                        <li><a href="#" onclick="filterTools('ai')" class="hover:text-white">AI Tools</a></li>
+                        <li><a href="#" onclick="filterTools('seo')" class="hover:text-white">SEO Tools</a></li>
+                        <li><a href="#" onclick="filterTools('student')" class="hover:text-white">Student Tools</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Connect With Us</h4>
-                    <div class="flex gap-4">
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
+                    <h4 class="font-bold mb-3">Connect</h4>
+                    <div class="flex gap-3">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+            <div class="border-t border-gray-700 mt-6 pt-6 text-center text-xs text-gray-400">
                 <p>© 2025 QuickToolsHub. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('hidden');
-        });
+        const tools = [
+            // AI Tools (18) - ADDED 3 MORE
+            {name: 'AI Content Writer', icon: 'fa-robot', color: 'purple', category: 'ai', badge: 'HOT', url: 'tools/ai/content-writer.html'},
+            {name: 'AI Paraphraser', icon: 'fa-exchange-alt', color: 'purple', category: 'ai', badge: 'POPULAR', url: 'tools/ai/paraphraser.html'},
+            {name: 'AI Grammar Checker', icon: 'fa-check-circle', color: 'purple', category: 'ai', url: 'tools/ai/grammar-checker.html'},
+            {name: 'AI Summarizer', icon: 'fa-compress-alt', color: 'purple', category: 'ai', url: 'tools/ai/summarizer.html'},
+            {name: 'AI Essay Writer', icon: 'fa-file-alt', color: 'purple', category: 'ai', url: 'tools/ai/essay-writer.html'},
+            {name: 'AI Email Generator', icon: 'fa-envelope', color: 'purple', category: 'ai', url: 'tools/ai/email-generator.html'},
+            {name: 'AI Story Generator', icon: 'fa-book', color: 'purple', category: 'ai', url: 'tools/ai/story-generator.html'},
+            {name: 'AI Resume Builder', icon: 'fa-file-invoice', color: 'purple', category: 'ai', url: 'tools/ai/resume-builder.html'},
+            {name: 'AI Chatbot', icon: 'fa-comments', color: 'purple', category: 'ai', url: 'tools/ai/chatbot.html'},
+            {name: 'AI Blog Post Generator', icon: 'fa-blog', color: 'purple', category: 'ai', url: 'tools/ai/blog-generator.html'},
+            {name: 'AI Product Description', icon: 'fa-shopping-bag', color: 'purple', category: 'ai', url: 'tools/ai/product-description.html'},
+            {name: 'AI Headline Generator', icon: 'fa-heading', color: 'purple', category: 'ai', url: 'tools/ai/headline-generator.html'},
+            {name: 'AI Code Generator', icon: 'fa-code', color: 'purple', category: 'ai', badge: 'NEW', url: 'tools/ai/code-generator.html'},
+            {name: 'AI Translator', icon: 'fa-language', color: 'purple', category: 'ai', url: 'tools/ai/translator.html'},
+            {name: 'AI Text Improver', icon: 'fa-magic', color: 'purple', category: 'ai', url: 'tools/ai/text-improver.html'},
+            {name: 'AI Video Script Writer', icon: 'fa-video', color: 'purple', category: 'ai', badge: 'HOT', url: 'tools/ai/video-script.html'},
+            {name: 'AI Cover Letter Generator', icon: 'fa-briefcase', color: 'purple', category: 'ai', url: 'tools/ai/cover-letter.html'},
+            {name: 'AI Article Rewriter', icon: 'fa-sync', color: 'purple', category: 'ai', url: 'tools/ai/article-rewriter.html'},
 
-        // Category Filter
+            // SEO Tools (12) - ADDED 2 MORE
+            {name: 'Keyword Density Checker', icon: 'fa-key', color: 'green', category: 'seo', badge: 'POPULAR', url: 'tools/seo/keyword-density.html'},
+            {name: 'Meta Title Generator', icon: 'fa-heading', color: 'green', category: 'seo', url: 'tools/seo/meta-title.html'},
+            {name: 'Meta Description Generator', icon: 'fa-align-left', color: 'green', category: 'seo', url: 'tools/seo/meta-description.html'},
+            {name: 'Word Counter', icon: 'fa-font', color: 'green', category: 'seo', url: 'tools/seo/word-counter.html'},
+            {name: 'Plagiarism Checker', icon: 'fa-copy', color: 'green', category: 'seo', badge: 'HOT', url: 'tools/seo/plagiarism-checker.html'},
+            {name: 'Keyword Research Tool', icon: 'fa-search', color: 'green', category: 'seo', url: 'tools/seo/keyword-research.html'},
+            {name: 'Backlink Checker', icon: 'fa-link', color: 'green', category: 'seo', url: 'tools/seo/backlink-checker.html'},
+            {name: 'Domain Authority Checker', icon: 'fa-chart-bar', color: 'green', category: 'seo', url: 'tools/seo/domain-authority.html'},
+            {name: 'XML Sitemap Generator', icon: 'fa-sitemap', color: 'green', category: 'seo', url: 'tools/seo/sitemap-generator.html'},
+            {name: 'Robots.txt Generator', icon: 'fa-robot', color: 'green', category: 'seo', url: 'tools/seo/robots-generator.html'},
+            {name: 'SEO Score Checker', icon: 'fa-check-double', color: 'green', category: 'seo', badge: 'NEW', url: 'tools/seo/seo-score.html'},
+            {name: 'Redirect Checker', icon: 'fa-directions', color: 'green', category: 'seo', url: 'tools/seo/redirect-checker.html'},
+
+            // Social Media Tools (12) - ADDED 2 MORE
+            {name: 'Keyword Density Checker', icon: 'fa-key', color: 'green', category: 'seo', badge: 'POPULAR', url: 'tools/seo/keyword-density.html'},
+            {name: 'Meta Title Generator', icon: 'fa-heading', color: 'green', category: 'seo', url: 'tools/seo/meta-title.html'},
+            {name: 'Meta Description Generator', icon: 'fa-align-left', color: 'green', category: 'seo', url: 'tools/seo/meta-description.html'},
+            {name: 'Word Counter', icon: 'fa-font', color: 'green', category: 'seo', url: 'tools/seo/word-counter.html'},
+            {name: 'Plagiarism Checker', icon: 'fa-copy', color: 'green', category: 'seo', badge: 'HOT', url: 'tools/seo/plagiarism-checker.html'},
+            {name: 'Keyword Research Tool', icon: 'fa-search', color: 'green', category: 'seo', url: 'tools/seo/keyword-research.html'},
+            {name: 'Backlink Checker', icon: 'fa-link', color: 'green', category: 'seo', url: 'tools/seo/backlink-checker.html'},
+            {name: 'Domain Authority Checker', icon: 'fa-chart-bar', color: 'green', category: 'seo', url: 'tools/seo/domain-authority.html'},
+            {name: 'XML Sitemap Generator', icon: 'fa-sitemap', color: 'green', category: 'seo', url: 'tools/seo/sitemap-generator.html'},
+            {name: 'Robots.txt Generator', icon: 'fa-robot', color: 'green', category: 'seo', url: 'tools/seo/robots-generator.html'},
+
+            // Social Media Tools (12) - ADDED 2 MORE
+            {name: 'YouTube Title Generator', icon: 'fa-youtube', color: 'red', category: 'social', badge: 'HOT', fab: true, url: 'tools/social/youtube-title.html'},
+            {name: 'YouTube Description Generator', icon: 'fa-youtube', color: 'red', category: 'social', fab: true, url: 'tools/social/youtube-description.html'},
+            {name: 'Instagram Caption Generator', icon: 'fa-instagram', color: 'pink', category: 'social', fab: true, url: 'tools/social/instagram-caption.html'},
+            {name: 'YouTube Hashtag Generator', icon: 'fa-hashtag', color: 'blue', category: 'social', url: 'tools/social/youtube-hashtag.html'},
+            {name: 'TikTok Caption Generator', icon: 'fa-tiktok', color: 'pink', category: 'social', fab: true, url: 'tools/social/tiktok-caption.html'},
+            {name: 'Twitter Thread Generator', icon: 'fa-twitter', color: 'blue', category: 'social', fab: true, url: 'tools/social/twitter-thread.html'},
+            {name: 'Facebook Post Generator', icon: 'fa-facebook', color: 'blue', category: 'social', fab: true, url: 'tools/social/facebook-post.html'},
+            {name: 'LinkedIn Post Generator', icon: 'fa-linkedin', color: 'blue', category: 'social', fab: true, url: 'tools/social/linkedin-post.html'},
+            {name: 'Pinterest Description Generator', icon: 'fa-pinterest', color: 'red', category: 'social', fab: true, url: 'tools/social/pinterest-description.html'},
+            {name: 'Social Media Bio Generator', icon: 'fa-user-circle', color: 'purple', category: 'social', url: 'tools/social/bio-generator.html'},
+            {name: 'YouTube Tag Generator', icon: 'fa-tags', color: 'red', category: 'social', badge: 'NEW', url: 'tools/social/youtube-tags.html'},
+            {name: 'Instagram Reel Ideas Generator', icon: 'fa-film', color: 'pink', category: 'social', url: 'tools/social/reel-ideas.html'},
+
+            // Student Tools (12) - ADDED 2 MORE
+            {name: 'YouTube Title Generator', icon: 'fa-youtube', color: 'red', category: 'social', badge: 'HOT', fab: true, url: 'tools/social/youtube-title.html'},
+            {name: 'YouTube Description Generator', icon: 'fa-youtube', color: 'red', category: 'social', fab: true, url: 'tools/social/youtube-description.html'},
+            {name: 'Instagram Caption Generator', icon: 'fa-instagram', color: 'pink', category: 'social', fab: true, url: 'tools/social/instagram-caption.html'},
+            {name: 'YouTube Hashtag Generator', icon: 'fa-hashtag', color: 'blue', category: 'social', url: 'tools/social/youtube-hashtag.html'},
+            {name: 'TikTok Caption Generator', icon: 'fa-tiktok', color: 'pink', category: 'social', fab: true, url: 'tools/social/tiktok-caption.html'},
+            {name: 'Twitter Thread Generator', icon: 'fa-twitter', color: 'blue', category: 'social', fab: true, url: 'tools/social/twitter-thread.html'},
+            {name: 'Facebook Post Generator', icon: 'fa-facebook', color: 'blue', category: 'social', fab: true, url: 'tools/social/facebook-post.html'},
+            {name: 'LinkedIn Post Generator', icon: 'fa-linkedin', color: 'blue', category: 'social', fab: true, url: 'tools/social/linkedin-post.html'},
+            {name: 'Pinterest Description Generator', icon: 'fa-pinterest', color: 'red', category: 'social', fab: true, url: 'tools/social/pinterest-description.html'},
+            {name: 'Social Media Bio Generator', icon: 'fa-user-circle', color: 'purple', category: 'social', url: 'tools/social/bio-generator.html'},
+
+            // Student Tools (12) - ADDED 2 MORE
+            {name: 'GPA Calculator', icon: 'fa-calculator', color: 'blue', category: 'student', badge: 'POPULAR', url: 'tools/student/gpa-calculator.html'},
+            {name: 'Percentage Calculator', icon: 'fa-percent', color: 'blue', category: 'student', url: 'tools/student/percentage-calculator.html'},
+            {name: 'Scientific Calculator', icon: 'fa-square-root-alt', color: 'blue', category: 'student', url: 'tools/student/scientific-calculator.html'},
+            {name: 'Age Calculator', icon: 'fa-birthday-cake', color: 'blue', category: 'student', url: 'tools/student/age-calculator.html'},
+            {name: 'BMI Calculator', icon: 'fa-weight', color: 'blue', category: 'student', url: 'tools/student/bmi-calculator.html'},
+            {name: 'Currency Converter', icon: 'fa-exchange-alt', color: 'blue', category: 'student', url: 'tools/student/currency-converter.html'},
+            {name: 'Unit Converter', icon: 'fa-ruler', color: 'blue', category: 'student', url: 'tools/student/unit-converter.html'},
+            {name: 'Random Number Generator', icon: 'fa-random', color: 'blue', category: 'student', url: 'tools/student/random-number.html'},
+            {name: 'Essay Grader', icon: 'fa-award', color: 'blue', category: 'student', url: 'tools/student/essay-grader.html'},
+            {name: 'Citation Generator', icon: 'fa-quote-right', color: 'blue', category: 'student', url: 'tools/student/citation-generator.html'},
+            {name: 'Grade Calculator', icon: 'fa-chart-line', color: 'blue', category: 'student', badge: 'NEW', url: 'tools/student/grade-calculator.html'},
+            {name: 'Time Zone Converter', icon: 'fa-clock', color: 'blue', category: 'student', url: 'tools/student/timezone-converter.html'},
+
+            // Utility Tools (15) - ADDED 5 MORE
+            {name: 'GPA Calculator', icon: 'fa-calculator', color: 'blue', category: 'student', badge: 'POPULAR', url: 'tools/student/gpa-calculator.html'},
+            {name: 'Percentage Calculator', icon: 'fa-percent', color: 'blue', category: 'student', url: 'tools/student/percentage-calculator.html'},
+            {name: 'Scientific Calculator', icon: 'fa-square-root-alt', color: 'blue', category: 'student', url: 'tools/student/scientific-calculator.html'},
+            {name: 'Age Calculator', icon: 'fa-birthday-cake', color: 'blue', category: 'student', url: 'tools/student/age-calculator.html'},
+            {name: 'BMI Calculator', icon: 'fa-weight', color: 'blue', category: 'student', url: 'tools/student/bmi-calculator.html'},
+            {name: 'Currency Converter', icon: 'fa-exchange-alt', color: 'blue', category: 'student', url: 'tools/student/currency-converter.html'},
+            {name: 'Unit Converter', icon: 'fa-ruler', color: 'blue', category: 'student', url: 'tools/student/unit-converter.html'},
+            {name: 'Random Number Generator', icon: 'fa-random', color: 'blue', category: 'student', url: 'tools/student/random-number.html'},
+            {name: 'Essay Grader', icon: 'fa-award', color: 'blue', category: 'student', url: 'tools/student/essay-grader.html'},
+            {name: 'Citation Generator', icon: 'fa-quote-right', color: 'blue', category: 'student', url: 'tools/student/citation-generator.html'},
+
+            // Utility Tools (10)
+            {name: 'PDF to Word Converter', icon: 'fa-file-pdf', color: 'orange', category: 'utility', badge: 'HOT', url: 'tools/utility/pdf-to-word.html'},
+            {name: 'Image Compressor', icon: 'fa-compress', color: 'blue', category: 'utility', url: 'tools/utility/image-compressor.html'},
+            {name: 'QR Code Generator', icon: 'fa-qrcode', color: 'indigo', category: 'utility', url: 'tools/utility/qr-generator.html'},
+            {name: 'Password Generator', icon: 'fa-lock', color: 'gray', category: 'utility', url: 'tools/utility/password-generator.html'},
+            {name: 'Base64 Encoder/Decoder', icon: 'fa-code', color: 'teal', category: 'utility', url: 'tools/utility/base64.html'},
+            {name: 'JSON Formatter', icon: 'fa-brackets-curly', color: 'green', category: 'utility', url: 'tools/utility/json-formatter.html'},
+            {name: 'URL Shortener', icon: 'fa-link', color: 'purple', category: 'utility', url: 'tools/utility/url-shortener.html'},
+            {name: 'Color Picker', icon: 'fa-palette', color: 'pink', category: 'utility', url: 'tools/utility/color-picker.html'},
+            {name: 'Lorem Ipsum Generator', icon: 'fa-paragraph', color: 'gray', category: 'utility', url: 'tools/utility/lorem-ipsum.html'},
+            {name: 'Markdown Editor', icon: 'fa-markdown', color: 'blue', category: 'utility', fab: true, url: 'tools/utility/markdown-editor.html'},
+
+            // Earning Tools (8)
+            {name: 'AdSense Revenue Calculator', icon: 'fa-ad', color: 'green', category: 'earning', url: 'tools/earning/adsense-calculator.html'},
+            {name: 'YouTube Earning Calculator', icon: 'fa-youtube', color: 'red', category: 'earning', fab: true, url: 'tools/earning/youtube-earning.html'},
+            {name: 'Invoice Generator', icon: 'fa-file-invoice-dollar', color: 'blue', category: 'earning', url: 'tools/earning/invoice-generator.html'},
+            {name: 'Freelance Rate Calculator', icon: 'fa-dollar-sign', color: 'green', category: 'earning', url: 'tools/earning/freelance-rate.html'},
+            {name: 'ROI Calculator', icon: 'fa-chart-pie', color: 'teal', category: 'earning', url: 'tools/earning/roi-calculator.html'},
+            {name: 'Salary Calculator', icon: 'fa-money-bill-wave', color: 'green', category: 'earning', badge: 'NEW', url: 'tools/earning/salary-calculator.html'},
+            {name: 'Tax Calculator', icon: 'fa-calculator', color: 'blue', category: 'earning', url: 'tools/earning/tax-calculator.html'},
+            {name: 'Crypto Profit Calculator', icon: 'fa-bitcoin', color: 'orange', category: 'earning', fab: true, badge: 'HOT', url: 'tools/earning/crypto-calculator.html'},
+
+            // Image & Design Tools (8) - NEW SECTION
+            {name: 'Background Remover', icon: 'fa-cut', color: 'purple', category: 'design', badge: 'HOT', url: 'tools/design/background-remover.html'},
+            {name: 'Image Resizer', icon: 'fa-expand', color: 'blue', category: 'design', url: 'tools/design/image-resizer.html'},
+            {name: 'Thumbnail Maker', icon: 'fa-image', color: 'red', category: 'design', badge: 'POPULAR', url: 'tools/design/thumbnail-maker.html'},
+            {name: 'Logo Maker', icon: 'fa-pencil-ruler', color: 'purple', category: 'design', url: 'tools/design/logo-maker.html'},
+            {name: 'Meme Generator', icon: 'fa-laugh', color: 'yellow', category: 'design', url: 'tools/design/meme-generator.html'},
+            {name: 'Screenshot Tool', icon: 'fa-camera', color: 'gray', category: 'design', url: 'tools/design/screenshot-tool.html'},
+            {name: 'Favicon Generator', icon: 'fa-icons', color: 'indigo', category: 'design', url: 'tools/design/favicon-generator.html'},
+            {name: 'Watermark Tool', icon: 'fa-copyright', color: 'blue', category: 'design', url: 'tools/design/watermark-tool.html'},
+
+            // Website & Dev Tools (7) - NEW SECTION
+            {name: 'Website Speed Test', icon: 'fa-tachometer-alt', color: 'red', category: 'webdev', badge: 'HOT', url: 'tools/webdev/speed-test.html'},
+            {name: 'HTML Minifier', icon: 'fa-compress-arrows-alt', color: 'orange', category: 'webdev', url: 'tools/webdev/html-minifier.html'},
+            {name: 'CSS Minifier', icon: 'fa-file-code', color: 'blue', category: 'webdev', url: 'tools/webdev/css-minifier.html'},
+            {name: 'JavaScript Minifier', icon: 'fa-js', color: 'yellow', category: 'webdev', fab: true, url: 'tools/webdev/js-minifier.html'},
+            {name: 'Responsive Design Checker', icon: 'fa-mobile-alt', color: 'purple', category: 'webdev', url: 'tools/webdev/responsive-checker.html'},
+            {name: 'Meta Tag Generator', icon: 'fa-tags', color: 'green', category: 'webdev', url: 'tools/webdev/meta-tag-generator.html'},
+            {name: 'Open Graph Generator', icon: 'fa-share-alt', color: 'blue', category: 'webdev', url: 'tools/webdev/og-generator.html'},
+
+            // Text & Content Tools (5) - ADDITIONAL
+            {name: 'Case Converter', icon: 'fa-text-height', color: 'teal', category: 'utility', badge: 'NEW', url: 'tools/utility/case-converter.html'},
+            {name: 'Text to Speech', icon: 'fa-volume-up', color: 'green', category: 'utility', badge: 'HOT', url: 'tools/utility/text-to-speech.html'},
+            {name: 'Speech to Text', icon: 'fa-microphone', color: 'red', category: 'utility', url: 'tools/utility/speech-to-text.html'},
+            {name: 'Reverse Text Generator', icon: 'fa-undo', color: 'purple', category: 'utility', url: 'tools/utility/reverse-text.html'},
+            {name: 'Remove Line Breaks', icon: 'fa-align-justify', color: 'blue', category: 'utility', url: 'tools/utility/remove-breaks.html'}
+        ];
+
+        function renderTools() {
+            const grid = document.getElementById('toolsGrid');
+            grid.innerHTML = tools.map(tool => `
+                <div class="tool-card bg-white rounded-lg shadow hover:shadow-xl transition p-4 border" data-category="${tool.category}">
+                    <div class="flex items-start justify-between mb-3">
+                        <h3 class="text-base font-bold text-gray-800 flex-1">
+                            <i class="${tool.fab ? 'fab' : 'fas'} ${tool.icon} text-${tool.color}-600 mr-2"></i>${tool.name}
+                        </h3>
+                        ${tool.badge ? `<span class="bg-${tool.badge === 'HOT' ? 'red' : 'yellow'}-${tool.badge === 'HOT' ? '500' : '400'} text-${tool.badge === 'HOT' ? 'white' : 'yellow-900'} text-xs font-bold px-2 py-1 rounded">${tool.badge}</span>` : ''}
+                    </div>
+                    <a href="${tool.url}" class="block bg-${tool.color}-600 text-white px-4 py-2 rounded-lg hover:bg-${tool.color}-700 transition text-center text-sm">
+                        <i class="fas fa-arrow-right mr-1"></i>Use Tool
+                    </a>
+                </div>
+            `).join('');
+        }
+
         function filterTools(category) {
             const cards = document.querySelectorAll('.tool-card');
             const buttons = document.querySelectorAll('.category-btn');
@@ -700,262 +299,23 @@
             event.target.classList.remove('bg-gray-100', 'text-gray-700');
             
             cards.forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+                card.style.display = (category === 'all' || card.dataset.category === category) ? 'block' : 'none';
             });
         }
 
-        // Search Functionality
         document.getElementById('searchTools').addEventListener('input', function(e) {
-            const searchTerm = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('.tool-card');
-            
-            cards.forEach(card => {
-                const title = card.querySelector('h3').textContent.toLowerCase();
-                const desc = card.querySelector('p').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || desc.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
+            const search = e.target.value.toLowerCase();
+            document.querySelectorAll('.tool-card').forEach(card => {
+                const text = card.textContent.toLowerCase();
+                card.style.display = text.includes(search) ? 'block' : 'none';
             });
         });
 
-        // Open Tool Modal
-        function openTool(toolName) {
-            const modal = document.getElementById('toolModal');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalContent = document.getElementById('modalContent');
-            
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
-            
-            if (toolName === 'wordCounter') {
-                modalTitle.innerHTML = '<i class="fas fa-font text-blue-600 mr-2"></i>Word Counter';
-                modalContent.innerHTML = `
-                    <div class="space-y-4">
-                        <textarea id="wordCountText" class="w-full h-64 p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none" placeholder="Type or paste your text here..."></textarea>
-                        
-                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <div class="bg-blue-50 p-4 rounded-lg text-center">
-                                <div class="text-3xl font-bold text-blue-600" id="wordCount">0</div>
-                                <div class="text-sm text-gray-600">Words</div>
-                            </div>
-                            <div class="bg-green-50 p-4 rounded-lg text-center">
-                                <div class="text-3xl font-bold text-green-600" id="charCount">0</div>
-                                <div class="text-sm text-gray-600">Characters</div>
-                            </div>
-                            <div class="bg-purple-50 p-4 rounded-lg text-center">
-                                <div class="text-3xl font-bold text-purple-600" id="sentenceCount">0</div>
-                                <div class="text-sm text-gray-600">Sentences</div>
-                            </div>
-                            <div class="bg-yellow-50 p-4 rounded-lg text-center">
-                                <div class="text-3xl font-bold text-yellow-600" id="paraCount">0</div>
-                                <div class="text-sm text-gray-600">Paragraphs</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex gap-2">
-                            <button onclick="document.getElementById('wordCountText').value = ''; updateWordCount();" class="bg-red-500 text-white px-6 py-2 rounded-lg hover:bg-red-600 transition">
-                                <i class="fas fa-trash mr-2"></i>Clear
-                            </button>
-                            <button onclick="copyText()" class="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition">
-                                <i class="fas fa-copy mr-2"></i>Copy Text
-                            </button>
-                        </div>
-                    </div>
-                `;
-                
-                document.getElementById('wordCountText').addEventListener('input', updateWordCount);
-                
-            } else if (toolName === 'imageCompressor') {
-                modalTitle.innerHTML = '<i class="fas fa-compress text-blue-600 mr-2"></i>Image Compressor';
-                modalContent.innerHTML = `
-                    <div class="space-y-4">
-                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-                            <i class="fas fa-cloud-upload-alt text-6xl text-gray-400 mb-4"></i>
-                            <p class="text-gray-600 mb-4">Drag & Drop your image here or click to browse</p>
-                            <input type="file" id="imageInput" accept="image/*" class="hidden" onchange="compressImage(event)">
-                            <button onclick="document.getElementById('imageInput').click()" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                                <i class="fas fa-folder-open mr-2"></i>Choose Image
-                            </button>
-                        </div>
-                        
-                        <div id="imagePreview" class="hidden space-y-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="text-center">
-                                    <h4 class="font-bold mb-2">Original</h4>
-                                    <img id="originalImage" class="w-full rounded-lg border">
-                                    <p id="originalSize" class="text-sm text-gray-600 mt-2"></p>
-                                </div>
-                                <div class="text-center">
-                                    <h4 class="font-bold mb-2">Compressed</h4>
-                                    <img id="compressedImage" class="w-full rounded-lg border">
-                                    <p id="compressedSize" class="text-sm text-gray-600 mt-2"></p>
-                                </div>
-                            </div>
-                            
-                            <div>
-                                <label class="block text-sm font-medium mb-2">Compression Quality: <span id="qualityValue">80</span>%</label>
-                                <input type="range" id="qualitySlider" min="10" max="100" value="80" class="w-full" oninput="document.getElementById('qualityValue').textContent = this.value; compressWithQuality()">
-                            </div>
-                            
-                            <button id="downloadBtn" class="w-full bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-                                <i class="fas fa-download mr-2"></i>Download Compressed Image
-                            </button>
-                        </div>
-                    </div>
-                `;
-                
-            } else if (toolName === 'qrGenerator') {
-                modalTitle.innerHTML = '<i class="fas fa-qrcode text-blue-600 mr-2"></i>QR Code Generator';
-                modalContent.innerHTML = `
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block text-sm font-medium mb-2">Enter URL or Text:</label>
-                            <input type="text" id="qrInput" placeholder="https://example.com" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
-                        </div>
-                        
-                        <button onclick="generateQR()" class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-                            <i class="fas fa-qrcode mr-2"></i>Generate QR Code
-                        </button>
-                        
-                        <div id="qrResult" class="hidden text-center">
-                            <canvas id="qrCanvas" class="mx-auto border-4 border-gray-200 rounded-lg"></canvas>
-                            <button onclick="downloadQR()" class="mt-4 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition">
-                                <i class="fas fa-download mr-2"></i>Download QR Code
-                            </button>
-                        </div>
-                    </div>
-                `;
-            }
-        }
-
-        function closeModal() {
-            document.getElementById('toolModal').classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Word Counter Functions
-        function updateWordCount() {
-            const text = document.getElementById('wordCountText').value;
-            
-            const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-            const chars = text.length;
-            const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
-            const paragraphs = text.split(/\n+/).filter(p => p.trim().length > 0);
-            
-            document.getElementById('wordCount').textContent = words.length;
-            document.getElementById('charCount').textContent = chars;
-            document.getElementById('sentenceCount').textContent = sentences.length;
-            document.getElementById('paraCount').textContent = paragraphs.length;
-        }
-
-        function copyText(id = 'wordCountText') {
-            const text = document.getElementById(id);
-            text.select();
-            document.execCommand('copy');
-            alert('Text copied to clipboard!');
-        }
-
-        // Image Compressor Functions
-        let originalFile;
-        
-        function compressImage(event) {
-            const file = event.target.files[0];
-            if (!file) return;
-            
-            originalFile = file;
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                document.getElementById('originalImage').src = e.target.result;
-                document.getElementById('originalSize').textContent = 'Size: ' + (file.size / 1024).toFixed(2) + ' KB';
-                document.getElementById('imagePreview').classList.remove('hidden');
-                compressWithQuality();
-            };
-            
-            reader.readAsDataURL(file);
-        }
-
-        function compressWithQuality() {
-            if (!originalFile) return;
-            
-            const quality = document.getElementById('qualitySlider').value / 100;
-            const reader = new FileReader();
-            
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0);
-                    
-                    canvas.toBlob(function(blob) {
-                        const url = URL.createObjectURL(blob);
-                        document.getElementById('compressedImage').src = url;
-                        document.getElementById('compressedSize').textContent = 'Size: ' + (blob.size / 1024).toFixed(2) + ' KB';
-                        
-                        document.getElementById('downloadBtn').onclick = function() {
-                            const a = document.createElement('a');
-                            a.href = url;
-                            a.download = 'compressed_' + originalFile.name;
-                            a.click();
-                        };
-                    }, 'image/jpeg', quality);
-                };
-                img.src = e.target.result;
-            };
-            
-            reader.readAsDataURL(originalFile);
-        }
-
-        // QR Code Generator
-        function generateQR() {
-            const text = document.getElementById('qrInput').value;
-            if (!text) {
-                alert('Please enter URL or text!');
-                return;
-            }
-            
-            const qrCanvas = document.getElementById('qrCanvas');
-            const ctx = qrCanvas.getContext('2d');
-            const size = 300;
-            qrCanvas.width = size;
-            qrCanvas.height = size;
-            
-            const img = new Image();
-            img.crossOrigin = 'anonymous';
-            img.onload = function() {
-                ctx.drawImage(img, 0, 0, size, size);
-                document.getElementById('qrResult').classList.remove('hidden');
-            };
-            
-            img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=' + size + 'x' + size + '&data=' + encodeURIComponent(text);
-        }
-
-        function downloadQR() {
-            const canvas = document.getElementById('qrCanvas');
-            const url = canvas.toDataURL('image/png');
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'qrcode.png';
-            a.click();
-        }
-
-        // Close modal on outside click
-        document.getElementById('toolModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeModal();
-            }
+        document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
         });
+
+        renderTools();
     </script>
 
     <style>
@@ -963,16 +323,13 @@
             background: linear-gradient(to right, #2563eb, #9333ea);
             color: white;
         }
-        
         .category-btn:not(.active) {
             background-color: #f3f4f6;
             color: #374151;
         }
-        
         .category-btn:not(.active):hover {
             background-color: #e5e7eb;
         }
     </style>
 </body>
 </html>
-                        
