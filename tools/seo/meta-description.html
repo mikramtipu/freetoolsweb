@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Description Generator - 100% Free</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Karla:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #1a1f3a;
+            --accent-primary: #00d9ff;
+            --accent-secondary: #ff006e;
+            --text-primary: #f0f4f8;
+            --text-muted: #94a3b8;
+            --border-color: #2d3548;
+            --success: #00ff88;
+            --warning: #ffb800;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Karla', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #0f1429 50%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(0, 217, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 0, 110, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease-out 0.2s backwards;
+        }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        .free-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--success), #00cc70);
+            color: var(--bg-primary);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        .card {
+            background: rgba(26, 31, 58, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--accent-primary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 15px 20px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: 'Karla', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: var(--accent-primary);
+            box-shadow: 0 0 0 3px rgba(0, 217, 255, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        .input-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .tone-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .tone-option {
+            padding: 12px;
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .tone-option:hover {
+            border-color: var(--accent-primary);
+            transform: translateY(-2px);
+        }
+
+        .tone-option.selected {
+            border-color: var(--accent-primary);
+            background: rgba(0, 217, 255, 0.1);
+            color: var(--accent-primary);
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        button {
+            flex: 1;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 12px;
+            font-family: 'Karla', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-generate {
+            background: linear-gradient(135deg, var(--accent-primary), #0099cc);
+            color: var(--bg-primary);
+            box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+        }
+
+        .btn-generate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
+        }
+
+        .btn-generate:active {
+            transform: translateY(0);
+        }
+
+        .btn-regenerate {
+            background: linear-gradient(135deg, var(--accent-secondary), #cc0055);
+            color: white;
+            box-shadow: 0 10px 30px rgba(255, 0, 110, 0.3);
+        }
+
+        .btn-regenerate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 40px rgba(255, 0, 110, 0.4);
+        }
+
+        .btn-clear {
+            background: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-muted);
+        }
+
+        .btn-clear:hover {
+            border-color: var(--accent-secondary);
+            color: var(--accent-secondary);
+        }
+
+        .output-section {
+            margin-top: 40px;
+            padding-top: 40px;
+            border-top: 2px solid var(--border-color);
+            display: none;
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .output-section.active {
+            display: block;
+        }
+
+        .output-label {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--accent-secondary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .variations-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            text-transform: none;
+        }
+
+        .output-box {
+            background: var(--bg-primary);
+            border: 2px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .output-box:hover {
+            border-color: var(--accent-primary);
+            transform: translateX(5px);
+        }
+
+        .output-box.selected {
+            border-color: var(--success);
+            background: rgba(0, 255, 136, 0.05);
+        }
+
+        .description-text {
+            color: var(--text-primary);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            word-wrap: break-word;
+        }
+
+        .char-counter {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .char-count {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .char-count.optimal {
+            color: var(--success);
+        }
+
+        .char-count.warning {
+            color: var(--warning);
+        }
+
+        .char-count.error {
+            color: var(--accent-secondary);
+        }
+
+        .copy-btn {
+            padding: 8px 20px;
+            background: var(--accent-primary);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .copy-btn:hover {
+            background: #00b8d9;
+            transform: scale(1.05);
+        }
+
+        .copy-btn.copied {
+            background: var(--success);
+        }
+
+        .tips-section {
+            margin-top: 40px;
+            padding: 30px;
+            background: rgba(0, 217, 255, 0.05);
+            border-left: 4px solid var(--accent-primary);
+            border-radius: 12px;
+        }
+
+        .tips-title {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--accent-primary);
+            margin-bottom: 15px;
+        }
+
+        .tips-list {
+            list-style: none;
+        }
+
+        .tips-list li {
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .tips-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent-primary);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                padding: 25px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .tone-selector {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Meta Description Generator</h1>
+            <p class="subtitle">Professional SEO descriptions - 100% Free & Unlimited</p>
+            <span class="free-badge">✨ FREE Forever - No API Required</span>
+        </header>
+
+        <div class="card">
+            <form id="metaForm">
+                <div class="form-group">
+                    <label for="pageTitle">Page Title / Topic *</label>
+                    <input type="text" id="pageTitle" placeholder="Apne page ka title ya topic enter karein" required>
+                    <p class="input-hint">Example: "Best Pizza in Karachi" ya "Web Development Services"</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="keywords">Target Keywords</label>
+                    <input type="text" id="keywords" placeholder="SEO, meta description, generator, tool">
+                    <p class="input-hint">Apne main keywords comma se separate kar ke likhen</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Page Content / Key Points</label>
+                    <textarea id="content" placeholder="Apne page ki kuch important information ya key points likhen jo description mein include honi chahiye..."></textarea>
+                    <p class="input-hint">Jitni zyada details den ge utna behtar description banega</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="tone">Description Tone</label>
+                    <div class="tone-selector">
+                        <div class="tone-option selected" data-tone="professional">Professional</div>
+                        <div class="tone-option" data-tone="friendly">Friendly</div>
+                        <div class="tone-option" data-tone="persuasive">Persuasive</div>
+                        <div class="tone-option" data-tone="informative">Informative</div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <button type="submit" class="btn-generate">Generate Descriptions</button>
+                    <button type="button" class="btn-clear" onclick="clearForm()">Clear All</button>
+                </div>
+            </form>
+
+            <div class="output-section" id="outputSection">
+                <div class="output-label">
+                    <span>✨ Generated Meta Descriptions</span>
+                    <span class="variations-label">3 variations (click to select)</span>
+                </div>
+                <div id="descriptionsContainer"></div>
+                <div style="margin-top: 20px; text-align: center;">
+                    <button type="button" class="btn-regenerate" onclick="regenerateDescriptions()">🔄 Generate New Variations</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3 class="tips-title">Meta Description Best Practices</h3>
+            <ul class="tips-list">
+                <li><strong>Optimal Length:</strong> 150-160 characters ideal hain Google search results ke liye</li>
+                <li><strong>Call to Action:</strong> "Discover", "Learn More", "Shop Now" jaise action words use karein</li>
+                <li><strong>Include Keywords:</strong> Apne main keywords naturally include karein description mein</li>
+                <li><strong>Be Unique:</strong> Har page ke liye unique description likhen</li>
+                <li><strong>Value Proposition:</strong> Bataye ke user ko aapki site visit karne se kya faida hoga</li>
+                <li><strong>Compelling:</strong> Description engaging aur click-worthy hona chahiye</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let selectedTone = 'professional';
+        let currentFormData = null;
+
+        // Tone selector
+        document.querySelectorAll('.tone-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.tone-option').forEach(o => o.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedTone = this.dataset.tone;
+            });
+        });
+
+        // Form submission
+        document.getElementById('metaForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            generateDescriptions();
+        });
+
+        // Call-to-action templates
+        const ctaTemplates = {
+            professional: ['Learn more', 'Discover', 'Explore', 'Find out', 'Get started'],
+            friendly: ['Check it out', 'See for yourself', 'Join us', 'Try it today', 'Come see'],
+            persuasive: ['Don\'t miss out', 'Get yours now', 'Limited time', 'Act now', 'Transform your'],
+            informative: ['Read more', 'Understand', 'Get the facts', 'See how', 'Learn about']
+        };
+
+        // Action words templates
+        const actionWords = {
+            professional: ['provides', 'offers', 'delivers', 'features', 'ensures'],
+            friendly: ['brings you', 'helps you', 'gives you', 'makes', 'creates'],
+            persuasive: ['unlock', 'transform', 'boost', 'maximize', 'achieve'],
+            informative: ['explains', 'covers', 'details', 'outlines', 'describes']
+        };
+
+        function generateDescriptions() {
+            const pageTitle = document.getElementById('pageTitle').value.trim();
+            const keywords = document.getElementById('keywords').value.trim();
+            const content = document.getElementById('content').value.trim();
+
+            if (!pageTitle) {
+                alert('Please enter a page title!');
+                return;
+            }
+
+            currentFormData = { pageTitle, keywords, content, tone: selectedTone };
+
+            const descriptions = createDescriptionVariations(pageTitle, keywords, content, selectedTone);
+            displayDescriptions(descriptions);
+
+            document.getElementById('outputSection').classList.add('active');
+            setTimeout(() => {
+                document.getElementById('outputSection').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 100);
+        }
+
+        function regenerateDescriptions() {
+            if (!currentFormData) return;
+            const { pageTitle, keywords, content, tone } = currentFormData;
+            const descriptions = createDescriptionVariations(pageTitle, keywords, content, tone);
+            displayDescriptions(descriptions);
+        }
+
+        function createDescriptionVariations(title, keywords, content, tone) {
+            const variations = [];
+            const keywordList = keywords ? keywords.split(',').map(k => k.trim()).filter(k => k) : [];
+            
+            // Variation 1: Title-focused with CTA
+            let desc1 = title;
+            if (content) {
+                const firstSentence = content.split('.')[0].trim();
+                if (firstSentence.length > 0 && firstSentence.length < 80) {
+                    desc1 += '. ' + firstSentence;
+                }
+            }
+            const cta1 = ctaTemplates[tone][Math.floor(Math.random() * ctaTemplates[tone].length)];
+            desc1 = truncateToOptimal(desc1 + '. ' + cta1 + ' today!');
+            variations.push(desc1);
+
+            // Variation 2: Keywords-focused
+            let desc2 = title;
+            if (keywordList.length > 0) {
+                const action = actionWords[tone][Math.floor(Math.random() * actionWords[tone].length)];
+                desc2 += ' ' + action + ' ' + keywordList.slice(0, 2).join(' and ');
+            }
+            if (content) {
+                const words = content.split(' ').slice(0, 15).join(' ');
+                desc2 += '. ' + words;
+            }
+            desc2 = truncateToOptimal(desc2);
+            variations.push(desc2);
+
+            // Variation 3: Benefit-focused
+            let desc3 = '';
+            if (content) {
+                const contentWords = content.split(' ');
+                const summary = contentWords.slice(0, 20).join(' ');
+                desc3 = summary + '. ';
+            }
+            desc3 += title;
+            if (keywordList.length > 0) {
+                desc3 += ' - ' + keywordList[0];
+            }
+            const cta3 = ctaTemplates[tone][Math.floor(Math.random() * ctaTemplates[tone].length)];
+            desc3 += '. ' + cta3 + '.';
+            desc3 = truncateToOptimal(desc3);
+            variations.push(desc3);
+
+            return variations;
+        }
+
+        function truncateToOptimal(text) {
+            // Clean up multiple spaces and periods
+            text = text.replace(/\s+/g, ' ').replace(/\.+/g, '.').trim();
+            
+            // Target 155 characters (middle of optimal range)
+            if (text.length <= 160) {
+                return text;
+            }
+
+            // Try to cut at sentence boundary
+            let truncated = text.substring(0, 157);
+            const lastPeriod = truncated.lastIndexOf('.');
+            const lastSpace = truncated.lastIndexOf(' ');
+
+            if (lastPeriod > 120) {
+                return truncated.substring(0, lastPeriod + 1);
+            } else if (lastSpace > 120) {
+                return truncated.substring(0, lastSpace) + '...';
+            } else {
+                return truncated + '...';
+            }
+        }
+
+        function displayDescriptions(descriptions) {
+            const container = document.getElementById('descriptionsContainer');
+            container.innerHTML = '';
+
+            descriptions.forEach((desc, index) => {
+                const box = document.createElement('div');
+                box.className = 'output-box';
+                
+                const descText = document.createElement('div');
+                descText.className = 'description-text';
+                descText.textContent = desc;
+                
+                const charCounter = document.createElement('div');
+                charCounter.className = 'char-counter';
+                
+                const charCount = document.createElement('span');
+                charCount.className = 'char-count ' + getCharClass(desc.length);
+                charCount.textContent = desc.length + ' characters';
+                
+                const copyBtn = document.createElement('button');
+                copyBtn.className = 'copy-btn';
+                copyBtn.textContent = 'Copy';
+                copyBtn.onclick = function() {
+                    copyDescription(this, desc);
+                };
+                
+                charCounter.appendChild(charCount);
+                charCounter.appendChild(copyBtn);
+                
+                box.appendChild(descText);
+                box.appendChild(charCounter);
+                
+                box.addEventListener('click', function(e) {
+                    if (!e.target.classList.contains('copy-btn')) {
+                        document.querySelectorAll('.output-box').forEach(b => b.classList.remove('selected'));
+                        this.classList.add('selected');
+                    }
+                });
+
+                container.appendChild(box);
+            });
+        }
+
+        function getCharClass(length) {
+            if (length >= 150 && length <= 160) return 'optimal';
+            if ((length >= 120 && length < 150) || (length > 160 && length <= 170)) return 'warning';
+            return 'error';
+        }
+
+        function copyDescription(button, description) {
+            navigator.clipboard.writeText(description).then(() => {
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                alert('Copy karne mein error aayi. Please manually copy karein.');
+            });
+        }
+
+        function clearForm() {
+            document.getElementById('metaForm').reset();
+            document.getElementById('outputSection').classList.remove('active');
+            document.querySelectorAll('.tone-option').forEach(o => o.classList.remove('selected'));
+            document.querySelector('.tone-option[data-tone="professional"]').classList.add('selected');
+            selectedTone = 'professional';
+            currentFormData = null;
+            document.getElementById('pageTitle').focus();
+        }
+    </script>
+</body>
+</html>
