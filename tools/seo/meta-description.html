@@ -1,6 +1,79 @@
 <!DOCTYPE html>
 <html lang="ur">
 <head>
+    <!-- Header - Fixed Version (No Duplicate Content) -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <!-- Logo -->
+            <a href="../../index.html" class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-tools text-white text-xl"></i>
+                </div>
+                <div>
+                    <div class="font-bold text-xl text-gray-800">QuickToolsHub</div>
+                    <p class="text-xs text-gray-500">100+ Free Tools</p>
+                </div>
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="../../index.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-home mr-1"></i>Home
+                </a>
+                <a href="../../index.html#tools" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-tools mr-1"></i>All Tools
+                </a>
+                <a href="../../blog.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-blog mr-1"></i>Blog
+                </a>
+                <a href="../../resources.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-book mr-1"></i>Resources
+                </a>
+                <a href="../../tutorials.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-chalkboard-teacher mr-1"></i>Tutorials
+                </a>
+                <a href="../../comparisons.html" class="text-gray-700 hover:text-blue-600 font-medium transition">
+                    <i class="fas fa-balance-scale mr-1"></i>Compare
+                </a>
+                <a href="../../contact.html" class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transition">
+                    <i class="fas fa-envelope mr-1"></i>Contact
+                </a>
+            </nav>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation -->
+        <nav id="mobileMenu" class="hidden md:hidden mt-4 space-y-2 pb-4 border-t border-gray-200 pt-4">
+            <a href="../../index.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-home mr-2"></i>Home
+            </a>
+            <a href="../../index.html#tools" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-tools mr-2"></i>All Tools
+            </a>
+            <a href="../../blog.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-blog mr-2"></i>Blog
+            </a>
+            <a href="../../resources.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-book mr-2"></i>Resources
+            </a>
+            <a href="../../tutorials.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-chalkboard-teacher mr-2"></i>Tutorials
+            </a>
+            <a href="../../comparisons.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-balance-scale mr-2"></i>Compare
+            </a>
+            <a href="../../contact.html" class="block py-2 text-gray-700 hover:text-blue-600 transition">
+                <i class="fas fa-envelope mr-2"></i>Contact
+            </a>
+        </nav>
+    </div>
+</header>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Description Generator - 100% Free</title>
@@ -706,3 +779,55 @@
     </script>
 </body>
 </html>
+<!-- Footer Component - Include this in every tool page -->
+<footer class="bg-gray-800 text-white py-12 mt-12">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <div>
+                <h3 class="font-bold text-lg mb-4">
+                    <i class="fas fa-tools mr-2"></i>QuickToolsHub
+                </h3>
+                <p class="text-gray-400 text-sm">Free online tools for everyone. Fast, simple, and secure.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Categories</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="../../index.html#tools" class="hover:text-white transition"><i class="fas fa-robot mr-2"></i>AI Tools</a></li>
+                    <li><a href="../../index.html#tools" class="hover:text-white transition"><i class="fas fa-chart-line mr-2"></i>SEO Tools</a></li>
+                    <li><a href="../../index.html#tools" class="hover:text-white transition"><i class="fab fa-youtube mr-2"></i>Social Media</a></li>
+                    <li><a href="../../index.html#tools" class="hover:text-white transition"><i class="fas fa-graduation-cap mr-2"></i>Student Tools</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Resources</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="../../blog.html" class="hover:text-white transition"><i class="fas fa-blog mr-2"></i>Blog</a></li>
+                    <li><a href="../../tutorials.html" class="hover:text-white transition"><i class="fas fa-chalkboard-teacher mr-2"></i>Tutorials</a></li>
+                    <li><a href="../../resources.html" class="hover:text-white transition"><i class="fas fa-book mr-2"></i>Resources</a></li>
+                    <li><a href="../../comparisons.html" class="hover:text-white transition"><i class="fas fa-balance-scale mr-2"></i>Comparisons</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Company</h4>
+                <ul class="space-y-2 text-sm text-gray-400">
+                    <li><a href="../../about.html" class="hover:text-white transition"><i class="fas fa-info-circle mr-2"></i>About Us</a></li>
+                    <li><a href="../../contact.html" class="hover:text-white transition"><i class="fas fa-envelope mr-2"></i>Contact</a></li>
+                    <li><a href="../../privacy.html" class="hover:text-white transition"><i class="fas fa-shield-alt mr-2"></i>Privacy Policy</a></li>
+                    <li><a href="../../terms.html" class="hover:text-white transition"><i class="fas fa-file-contract mr-2"></i>Terms of Service</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400 text-sm">
+            <p>&copy; 2025 QuickToolsHub. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
