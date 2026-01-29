@@ -6,8 +6,15 @@
       "color": "blue",
       "category": "utility",
       "badge": "HOT",
-      "url": "tools/utility/pdf-to-word.html",
-      "description": "Convert PDF and images to Word documents with perfect formatting"
+      "url": "tools/utility/pdf-to-word.html"
+    },
+    {
+      "name": "Word to PDF Converter",
+      "icon": "fa-file-pdf",
+      "color": "red",
+      "category": "utility",
+      "badge": "POPULAR",
+      "url": "tools/utility/word-to-pdf.html"
     }
   ]
 }
