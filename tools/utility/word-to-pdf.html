@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    
+    <!-- Tool Meta Tags -->
+    <title>Word to PDF Converter - QuickToolsHub</title>
+    <meta name="description" content="Free online Word to PDF converter. Upload Word files or paste text to convert to PDF instantly!">
+    <meta name="tool-name" content="Word to PDF Converter">
+    <meta name="tool-category" content="Utility Tools">
+    
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+    <style>
+        html { scroll-behavior: smooth; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { 
+            background: linear-gradient(to bottom, #2563eb, #9333ea);
+            border-radius: 5px;
+        }
+        
+        /* Mobile touch improvements */
+        button, input, textarea, label {
+            -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+            touch-action: manipulation;
+        }
+        
+        button {
+            cursor: pointer;
+            user-select: none;
+        }
+        
+        /* Larger tap targets */
+        @media (max-width: 768px) {
+            button {
+                min-height: 48px !important;
+                padding: 12px 20px !important;
+            }
+            
+            .upload-label {
+                min-height: 48px !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+        }
+        
+        .drop-zone {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .drop-zone:active {
+            transform: scale(0.98);
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- ========== UNIVERSAL HEADER (AUTO-LOADED) ========== -->
+    <div id="universal-header"></div>
+    
+    <!-- ========== UNIVERSAL BREADCRUMB (AUTO-LOADED) ========== -->
+    <div id="universal-breadcrumb"></div>
+    
+    <!-- ========== TOOL CONTENT ========== -->
+    <section class="py-8 md:py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                
+                <!-- Tool Header -->
+                <div class="text-center mb-6 md:mb-8">
+                    <div class="inline-block bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-xs md:text-sm font-bold mb-3 md:mb-4">
+                        <i class="fas fa-fire mr-1 md:mr-2"></i>POPULAR TOOL
+                    </div>
+                    <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mb-2 md:mb-4">📄 Word to PDF Converter</h2>
+                    <p class="text-sm md:text-lg text-gray-600 px-4">Upload Word file or paste text to convert to PDF</p>
+                </div>
+
+                <!-- Method Tabs -->
+                <div class="flex gap-2 mb-6">
+                    <button 
+                        type="button"
+                        id="tabUpload" 
+                        onclick="switchTab('upload')" 
+                        class="flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gradient-to-r from-green-600 to-blue-600 text-white"
+                    >
+                        <i class="fas fa-upload mr-2"></i>Upload File
+                    </button>
+                    <button 
+                        type="button"
+                        id="tabPaste" 
+                        onclick="switchTab('paste')" 
+                        class="flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gray-200 text-gray-700"
+                    >
+                        <i class="fas fa-paste mr-2"></i>Paste Text
+                    </button>
+                </div>
+
+                <!-- Upload Method -->
+                <div id="uploadMethod" class="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-4 md:p-8 mb-6 border-2 border-green-200">
+                    <h3 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-800">Upload Your Word File</h3>
+                    
+                    <div class="drop-zone bg-white border-3 border-dashed border-green-400 rounded-lg p-6 md:p-8 text-center" id="dropZone">
+                        <div class="text-4xl md:text-6xl mb-3 md:mb-4">📝</div>
+                        <h4 class="text-base md:text-xl font-bold mb-2">Tap to Select File</h4>
+                        <p class="text-xs md:text-sm text-gray-600 mb-3 md:mb-4">Supports: TXT files</p>
+                        <label for="fileInput" class="upload-label inline-block bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold cursor-pointer hover:shadow-lg transition active:scale-95 text-sm md:text-base">
+                            <i class="fas fa-file-upload mr-2"></i>Choose File
+                        </label>
+                        <input 
+                            type="file" 
+                            id="fileInput" 
+                            accept=".txt" 
+                            class="hidden"
+                        >
+                    </div>
+
+                    <div class="mt-4 bg-yellow-50 border-2 border-yellow-200 rounded-lg p-3 md:p-4">
+                        <p class="text-xs md:text-sm text-gray-700">
+                            <i class="fas fa-info-circle text-yellow-600 mr-2"></i>
+                            <strong>Note:</strong> For best results with Word documents (.doc/.docx), please copy the text and use the "Paste Text" method instead.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Paste Method -->
+                <div id="pasteMethod" class="hidden bg-white rounded-xl shadow-lg p-4 md:p-8 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-gray-800">Paste Your Text</h3>
+                    
+                    <div class="mb-4 md:mb-6">
+                        <label class="block text-base md:text-lg font-bold text-gray-800 mb-3">
+                            <i class="fas fa-keyboard text-blue-600 mr-2"></i>Text from Word Document
+                        </label>
+                        <textarea 
+                            id="textInput" 
+                            placeholder="1. Open your Word document
+2. Select all (Ctrl+A or Cmd+A)
+3. Copy (Ctrl+C or Cmd+C)
+4. Paste here (Ctrl+V or Cmd+V)
+
+Or simply type your text..." 
+                            class="w-full h-64 md:h-80 p-3 md:p-4 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none resize-vertical text-sm md:text-base"
+                        ></textarea>
+                        <div class="flex justify-between items-center mt-2 text-xs md:text-sm text-gray-500">
+                            <span id="charCount">0 characters</span>
+                            <button 
+                                type="button"
+                                onclick="clearText()" 
+                                class="text-red-600 hover:text-red-700 font-medium py-2 px-3 rounded"
+                            >
+                                <i class="fas fa-trash mr-1"></i>Clear
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6">
+                        <div>
+                            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-2">Document Title</label>
+                            <input 
+                                type="text" 
+                                id="docTitle" 
+                                placeholder="My Document" 
+                                class="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-sm md:text-base"
+                            >
+                        </div>
+                        <div>
+                            <label class="block text-xs md:text-sm font-bold text-gray-700 mb-2">Font Size</label>
+                            <select id="fontSize" class="w-full px-3 md:px-4 py-2 md:py-3 border-2 border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none text-sm md:text-base">
+                                <option value="10">Small (10pt)</option>
+                                <option value="12" selected>Normal (12pt)</option>
+                                <option value="14">Large (14pt)</option>
+                                <option value="16">Extra Large (16pt)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button 
+                        type="button"
+                        onclick="generatePDF()" 
+                        class="w-full bg-gradient-to-r from-red-600 to-pink-600 text-white px-6 md:px-8 py-4 md:py-5 rounded-lg font-bold text-base md:text-lg hover:shadow-xl transition active:scale-95"
+                    >
+                        <i class="fas fa-file-pdf mr-2"></i>Generate PDF
+                    </button>
+                </div>
+
+                <!-- Processing -->
+                <div id="processing" class="hidden bg-white rounded-xl p-6 md:p-8 text-center shadow-lg mb-6">
+                    <div class="spinner mx-auto mb-4"></div>
+                    <h3 class="text-lg md:text-xl font-bold mb-2">⚡ Processing...</h3>
+                    <p class="text-sm md:text-base text-gray-600">Creating your PDF...</p>
+                </div>
+
+                <!-- Features -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="bg-blue-50 p-4 md:p-6 rounded-xl border-2 border-blue-200 text-center">
+                        <i class="fas fa-bolt text-blue-600 text-2xl md:text-3xl mb-2 md:mb-3"></i>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">Fast Processing</h3>
+                        <p class="text-xs md:text-sm text-gray-600">Instant conversion</p>
+                    </div>
+                    <div class="bg-green-50 p-4 md:p-6 rounded-xl border-2 border-green-200 text-center">
+                        <i class="fas fa-shield-alt text-green-600 text-2xl md:text-3xl mb-2 md:mb-3"></i>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">100% Secure</h3>
+                        <p class="text-xs md:text-sm text-gray-600">Local processing</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 md:p-6 rounded-xl border-2 border-purple-200 text-center">
+                        <i class="fas fa-gift text-purple-600 text-2xl md:text-3xl mb-2 md:mb-3"></i>
+                        <h3 class="font-bold text-sm md:text-base mb-1 md:mb-2">Free Forever</h3>
+                        <p class="text-xs md:text-sm text-gray-600">No limits</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- ========== UNIVERSAL FOOTER (AUTO-LOADED) ========== -->
+    <div id="universal-footer"></div>
+    
+    <!-- Universal Template Script -->
+    <script src="../../universal-template.js"></script>
+    
+    <!-- ========== TOOL JAVASCRIPT ========== -->
+    <script>
+        let currentFileName = 'document';
+        
+        // Tab switching
+        function switchTab(tab) {
+            const uploadTab = document.getElementById('tabUpload');
+            const pasteTab = document.getElementById('tabPaste');
+            const uploadMethod = document.getElementById('uploadMethod');
+            const pasteMethod = document.getElementById('pasteMethod');
+            
+            if (tab === 'upload') {
+                uploadTab.className = 'flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gradient-to-r from-green-600 to-blue-600 text-white';
+                pasteTab.className = 'flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gray-200 text-gray-700';
+                uploadMethod.classList.remove('hidden');
+                pasteMethod.classList.add('hidden');
+            } else {
+                pasteTab.className = 'flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gradient-to-r from-green-600 to-blue-600 text-white';
+                uploadTab.className = 'flex-1 py-3 md:py-4 px-4 rounded-lg font-bold text-sm md:text-base transition bg-gray-200 text-gray-700';
+                pasteMethod.classList.remove('hidden');
+                uploadMethod.classList.add('hidden');
+            }
+        }
+        
+        // Character counter
+        const textInput = document.getElementById('textInput');
+        const charCount = document.getElementById('charCount');
+        
+        textInput.addEventListener('input', function() {
+            charCount.textContent = this.value.length.toLocaleString() + ' characters';
+        });
+        
+        // File input
+        document.getElementById('fileInput').addEventListener('change', function(e) {
+            if (e.target.files[0]) handleFile(e.target.files[0]);
+        });
+        
+        // Drop zone click
+        document.getElementById('dropZone').addEventListener('click', function(e) {
+            if (e.target.tagName !== 'LABEL' && e.target.tagName !== 'INPUT') {
+                document.getElementById('fileInput').click();
+            }
+        });
+        
+        function handleFile(file) {
+            if (!file.name.endsWith('.txt')) {
+                alert('⚠️ Please use a .txt file or switch to "Paste Text" method for Word documents.\n\nFor Word files:\n1. Switch to "Paste Text" tab\n2. Open your Word document\n3. Copy all text (Ctrl+A then Ctrl+C)\n4. Paste here');
+                return;
+            }
+            
+            currentFileName = file.name.replace('.txt', '');
+            
+            document.getElementById('processing').classList.remove('hidden');
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const text = e.target.result;
+                
+                if (!text || text.length < 10) {
+                    alert('❌ File is empty or too short');
+                    document.getElementById('processing').classList.add('hidden');
+                    return;
+                }
+                
+                // Switch to paste method and fill text
+                switchTab('paste');
+                textInput.value = text;
+                charCount.textContent = text.length.toLocaleString() + ' characters';
+                document.getElementById('docTitle').value = currentFileName;
+                document.getElementById('processing').classList.add('hidden');
+                
+                // Scroll to text area
+                textInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            };
+            
+            reader.readAsText(file);
+        }
+        
+        function clearText() {
+            if (textInput.value.length === 0) return;
+            
+            if (confirm('Clear all text?')) {
+                textInput.value = '';
+                charCount.textContent = '0 characters';
+            }
+        }
+        
+        function generatePDF() {
+            const text = textInput.value.trim();
+            
+            if (!text) {
+                alert('⚠️ Please enter some text first!');
+                textInput.focus();
+                return;
+            }
+            
+            const btn = event.target;
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Creating PDF...';
+            btn.disabled = true;
+            
+            setTimeout(function() {
+                try {
+                    const { jsPDF } = window.jspdf;
+                    const doc = new jsPDF();
+                    
+                    const title = document.getElementById('docTitle').value.trim() || 'Document';
+                    const fontSize = parseInt(document.getElementById('fontSize').value);
+                    
+                    doc.setFontSize(fontSize);
+                    
+                    const margin = 15;
+                    const lineHeight = fontSize * 0.5;
+                    const maxWidth = doc.internal.pageSize.getWidth() - (margin * 2);
+                    const maxHeight = doc.internal.pageSize.getHeight();
+                    
+                    let y = margin;
+                    
+                    // Title
+                    if (title !== 'Document') {
+                        doc.setFontSize(fontSize + 4);
+                        doc.setFont(undefined, 'bold');
+                        doc.text(title, margin, y);
+                        y += lineHeight * 2.5;
+                        doc.setFont(undefined, 'normal');
+                        doc.setFontSize(fontSize);
+                    }
+                    
+                    // Content
+                    const paragraphs = text.split(/\n+/);
+                    
+                    paragraphs.forEach(function(para) {
+                        if (!para.trim()) return;
+                        
+                        const lines = doc.splitTextToSize(para, maxWidth);
+                        
+                        lines.forEach(function(line) {
+                            if (y + lineHeight > maxHeight - margin) {
+                                doc.addPage();
+                                y = margin;
+                            }
+                            doc.text(line, margin, y);
+                            y += lineHeight;
+                        });
+                        
+                        y += lineHeight * 0.6;
+                    });
+                    
+                    const filename = (title.replace(/[^a-z0-9]/gi, '_').toLowerCase() || 'document') + '.pdf';
+                    doc.save(filename);
+                    
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                    
+                    setTimeout(function() {
+                        alert('✅ PDF downloaded successfully!');
+                    }, 500);
+                    
+                } catch (error) {
+                    console.error('Error:', error);
+                    alert('❌ Error creating PDF. Please try again.');
+                    btn.innerHTML = originalHTML;
+                    btn.disabled = false;
+                }
+            }, 100);
+        }
+        
+        console.log('✅ Word to PDF Converter loaded!');
+    </script>
+    
+</body>
+</html>
